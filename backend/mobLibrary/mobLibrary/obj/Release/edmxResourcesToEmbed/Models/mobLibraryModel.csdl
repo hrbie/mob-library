@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mobLibraryModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="mobLibraryEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="CADENA_LIBRERIAS" EntityType="mobLibraryModel.CADENA_LIBRERIAS" />
+    <EntitySet Name="CATALOGO_LIBRERIA" EntityType="mobLibraryModel.CATALOGO_LIBRERIA" />
+    <EntitySet Name="GENERO" EntityType="mobLibraryModel.GENERO" />
+    <EntitySet Name="INVENTARIO_PDV" EntityType="mobLibraryModel.INVENTARIO_PDV" />
+    <EntitySet Name="LIBRO" EntityType="mobLibraryModel.LIBRO" />
+    <EntitySet Name="LISTA_LIBROS" EntityType="mobLibraryModel.LISTA_LIBROS" />
+    <EntitySet Name="PUNTO_VENTA" EntityType="mobLibraryModel.PUNTO_VENTA" />
+    <EntitySet Name="SOLICITUD_PEDIDO" EntityType="mobLibraryModel.SOLICITUD_PEDIDO" />
+    <EntitySet Name="SOLICITUD_TRASLADO" EntityType="mobLibraryModel.SOLICITUD_TRASLADO" />
+    <EntitySet Name="USUARIO" EntityType="mobLibraryModel.USUARIO" />
+    <AssociationSet Name="LIBRERIA_FK" Association="mobLibraryModel.LIBRERIA_FK">
+      <End Role="CADENA_LIBRERIAS" EntitySet="CADENA_LIBRERIAS" />
+      <End Role="CATALOGO_LIBRERIA" EntitySet="CATALOGO_LIBRERIA" />
+    </AssociationSet>
+    <AssociationSet Name="PUNTO_VENTA_FK" Association="mobLibraryModel.PUNTO_VENTA_FK">
+      <End Role="CADENA_LIBRERIAS" EntitySet="CADENA_LIBRERIAS" />
+      <End Role="PUNTO_VENTA" EntitySet="PUNTO_VENTA" />
+    </AssociationSet>
+    <AssociationSet Name="INVENTARIO_PDV_LIBRO_FK" Association="mobLibraryModel.INVENTARIO_PDV_LIBRO_FK">
+      <End Role="CATALOGO_LIBRERIA" EntitySet="CATALOGO_LIBRERIA" />
+      <End Role="INVENTARIO_PDV" EntitySet="INVENTARIO_PDV" />
+    </AssociationSet>
+    <AssociationSet Name="LIBRO_FK" Association="mobLibraryModel.LIBRO_FK">
+      <End Role="LIBRO" EntitySet="LIBRO" />
+      <End Role="CATALOGO_LIBRERIA" EntitySet="CATALOGO_LIBRERIA" />
+    </AssociationSet>
+    <AssociationSet Name="ORIGEN_FK" Association="mobLibraryModel.ORIGEN_FK">
+      <End Role="INVENTARIO_PDV" EntitySet="INVENTARIO_PDV" />
+      <End Role="SOLICITUD_TRASLADO" EntitySet="SOLICITUD_TRASLADO" />
+    </AssociationSet>
+    <AssociationSet Name="PDV_FK" Association="mobLibraryModel.PDV_FK">
+      <End Role="PUNTO_VENTA" EntitySet="PUNTO_VENTA" />
+      <End Role="INVENTARIO_PDV" EntitySet="INVENTARIO_PDV" />
+    </AssociationSet>
+    <AssociationSet Name="SOLICITUD_PEDIDO_LIBRO_FK" Association="mobLibraryModel.SOLICITUD_PEDIDO_LIBRO_FK">
+      <End Role="INVENTARIO_PDV" EntitySet="INVENTARIO_PDV" />
+      <End Role="SOLICITUD_PEDIDO" EntitySet="SOLICITUD_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="LISTA_LIBROS_LIBRO_FK" Association="mobLibraryModel.LISTA_LIBROS_LIBRO_FK">
+      <End Role="LIBRO" EntitySet="LIBRO" />
+      <End Role="LISTA_LIBROS" EntitySet="LISTA_LIBROS" />
+    </AssociationSet>
+    <AssociationSet Name="LISTA_LIBROS_USUARIO_FK" Association="mobLibraryModel.LISTA_LIBROS_USUARIO_FK">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="LISTA_LIBROS" EntitySet="LISTA_LIBROS" />
+    </AssociationSet>
+    <AssociationSet Name="DESTINO_FK" Association="mobLibraryModel.DESTINO_FK">
+      <End Role="PUNTO_VENTA" EntitySet="PUNTO_VENTA" />
+      <End Role="SOLICITUD_TRASLADO" EntitySet="SOLICITUD_TRASLADO" />
+    </AssociationSet>
+    <AssociationSet Name="SOLICITUD_PEDIDO_USUARIO_FK" Association="mobLibraryModel.SOLICITUD_PEDIDO_USUARIO_FK">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="SOLICITUD_PEDIDO" EntitySet="SOLICITUD_PEDIDO" />
+    </AssociationSet>
+    <AssociationSet Name="SOLICITUD_TRASLADO_USUARIO_FK" Association="mobLibraryModel.SOLICITUD_TRASLADO_USUARIO_FK">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="SOLICITUD_TRASLADO" EntitySet="SOLICITUD_TRASLADO" />
+    </AssociationSet>
+    <AssociationSet Name="GENERO_FAVORITO" Association="mobLibraryModel.GENERO_FAVORITO">
+      <End Role="GENERO" EntitySet="GENERO" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="GENERO_LIBRO" Association="mobLibraryModel.GENERO_LIBRO">
+      <End Role="GENERO" EntitySet="GENERO" />
+      <End Role="LIBRO" EntitySet="LIBRO" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CADENA_LIBRERIAS">
+    <Key>
+      <PropertyRef Name="ID_LIBRERIA" />
+    </Key>
+    <Property Name="ID_LIBRERIA" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="CATALOGO_LIBRERIA" Relationship="mobLibraryModel.LIBRERIA_FK" FromRole="CADENA_LIBRERIAS" ToRole="CATALOGO_LIBRERIA" />
+    <NavigationProperty Name="PUNTO_VENTA" Relationship="mobLibraryModel.PUNTO_VENTA_FK" FromRole="CADENA_LIBRERIAS" ToRole="PUNTO_VENTA" />
+  </EntityType>
+  <EntityType Name="CATALOGO_LIBRERIA">
+    <Key>
+      <PropertyRef Name="ID_LIBRERIA" />
+      <PropertyRef Name="ISBN" />
+    </Key>
+    <Property Name="ID_LIBRERIA" Type="Int32" Nullable="false" />
+    <Property Name="ISBN" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="CADENA_LIBRERIAS" Relationship="mobLibraryModel.LIBRERIA_FK" FromRole="CATALOGO_LIBRERIA" ToRole="CADENA_LIBRERIAS" />
+    <NavigationProperty Name="INVENTARIO_PDV" Relationship="mobLibraryModel.INVENTARIO_PDV_LIBRO_FK" FromRole="CATALOGO_LIBRERIA" ToRole="INVENTARIO_PDV" />
+    <NavigationProperty Name="LIBRO" Relationship="mobLibraryModel.LIBRO_FK" FromRole="CATALOGO_LIBRERIA" ToRole="LIBRO" />
+  </EntityType>
+  <EntityType Name="GENERO">
+    <Key>
+      <PropertyRef Name="ID_GENERO" />
+    </Key>
+    <Property Name="ID_GENERO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="GENERO1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="USUARIO" Relationship="mobLibraryModel.GENERO_FAVORITO" FromRole="GENERO" ToRole="USUARIO" />
+    <NavigationProperty Name="LIBRO" Relationship="mobLibraryModel.GENERO_LIBRO" FromRole="GENERO" ToRole="LIBRO" />
+  </EntityType>
+  <EntityType Name="INVENTARIO_PDV">
+    <Key>
+      <PropertyRef Name="ID_LIBRERIA" />
+      <PropertyRef Name="ID_PDV" />
+      <PropertyRef Name="ISBN" />
+    </Key>
+    <Property Name="ID_LIBRERIA" Type="Int32" Nullable="false" />
+    <Property Name="ID_PDV" Type="Int32" Nullable="false" />
+    <Property Name="ISBN" Type="Int64" Nullable="false" />
+    <Property Name="CANTIDAD_DISPONIBLE" Type="Int32" />
+    <NavigationProperty Name="CATALOGO_LIBRERIA" Relationship="mobLibraryModel.INVENTARIO_PDV_LIBRO_FK" FromRole="INVENTARIO_PDV" ToRole="CATALOGO_LIBRERIA" />
+    <NavigationProperty Name="SOLICITUD_TRASLADO" Relationship="mobLibraryModel.ORIGEN_FK" FromRole="INVENTARIO_PDV" ToRole="SOLICITUD_TRASLADO" />
+    <NavigationProperty Name="PUNTO_VENTA" Relationship="mobLibraryModel.PDV_FK" FromRole="INVENTARIO_PDV" ToRole="PUNTO_VENTA" />
+    <NavigationProperty Name="SOLICITUD_PEDIDO" Relationship="mobLibraryModel.SOLICITUD_PEDIDO_LIBRO_FK" FromRole="INVENTARIO_PDV" ToRole="SOLICITUD_PEDIDO" />
+  </EntityType>
+  <EntityType Name="LIBRO">
+    <Key>
+      <PropertyRef Name="ISBN" />
+    </Key>
+    <Property Name="ISBN" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AUTOR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="EDITORIAL" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PRECIO" Type="Int32" />
+    <Property Name="ANIO" Type="Int32" />
+    <Property Name="CALIFICACION" Type="Int32" />
+    <NavigationProperty Name="CATALOGO_LIBRERIA" Relationship="mobLibraryModel.LIBRO_FK" FromRole="LIBRO" ToRole="CATALOGO_LIBRERIA" />
+    <NavigationProperty Name="LISTA_LIBROS" Relationship="mobLibraryModel.LISTA_LIBROS_LIBRO_FK" FromRole="LIBRO" ToRole="LISTA_LIBROS" />
+    <NavigationProperty Name="GENERO" Relationship="mobLibraryModel.GENERO_LIBRO" FromRole="LIBRO" ToRole="GENERO" />
+  </EntityType>
+  <EntityType Name="LISTA_LIBROS">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+      <PropertyRef Name="ISBN" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" />
+    <Property Name="ISBN" Type="Int64" Nullable="false" />
+    <Property Name="CALIFICACION" Type="Int32" />
+    <Property Name="OPINION" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="LIBRO" Relationship="mobLibraryModel.LISTA_LIBROS_LIBRO_FK" FromRole="LISTA_LIBROS" ToRole="LIBRO" />
+    <NavigationProperty Name="USUARIO" Relationship="mobLibraryModel.LISTA_LIBROS_USUARIO_FK" FromRole="LISTA_LIBROS" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="PUNTO_VENTA">
+    <Key>
+      <PropertyRef Name="ID_PDV" />
+    </Key>
+    <Property Name="ID_PDV" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_LIBRERIA" Type="Int32" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="DIRECCIÓN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LATITUD" Type="Double" />
+    <Property Name="LONGITUD" Type="Double" />
+    <NavigationProperty Name="CADENA_LIBRERIAS" Relationship="mobLibraryModel.PUNTO_VENTA_FK" FromRole="PUNTO_VENTA" ToRole="CADENA_LIBRERIAS" />
+    <NavigationProperty Name="INVENTARIO_PDV" Relationship="mobLibraryModel.PDV_FK" FromRole="PUNTO_VENTA" ToRole="INVENTARIO_PDV" />
+    <NavigationProperty Name="SOLICITUD_TRASLADO" Relationship="mobLibraryModel.DESTINO_FK" FromRole="PUNTO_VENTA" ToRole="SOLICITUD_TRASLADO" />
+  </EntityType>
+  <EntityType Name="SOLICITUD_PEDIDO">
+    <Key>
+      <PropertyRef Name="ID_PEDIDO" />
+    </Key>
+    <Property Name="ID_PEDIDO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" />
+    <Property Name="ID_LIBRERIA" Type="Int32" Nullable="false" />
+    <Property Name="ID_PDV" Type="Int32" Nullable="false" />
+    <Property Name="ISBN" Type="Int64" Nullable="false" />
+    <Property Name="FECHA" Type="DateTime" Precision="0" />
+    <Property Name="ESTADO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CANTIDAD" Type="Int32" />
+    <NavigationProperty Name="INVENTARIO_PDV" Relationship="mobLibraryModel.SOLICITUD_PEDIDO_LIBRO_FK" FromRole="SOLICITUD_PEDIDO" ToRole="INVENTARIO_PDV" />
+    <NavigationProperty Name="USUARIO" Relationship="mobLibraryModel.SOLICITUD_PEDIDO_USUARIO_FK" FromRole="SOLICITUD_PEDIDO" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="SOLICITUD_TRASLADO">
+    <Key>
+      <PropertyRef Name="ID_TRASLADO" />
+    </Key>
+    <Property Name="ID_TRASLADO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" />
+    <Property Name="ID_LIBRERIA" Type="Int32" Nullable="false" />
+    <Property Name="ID_PDV_ORIGEN" Type="Int32" Nullable="false" />
+    <Property Name="ID_PDV_DESTINO" Type="Int32" Nullable="false" />
+    <Property Name="ISBN" Type="Int64" Nullable="false" />
+    <Property Name="FECHA" Type="DateTime" Precision="0" />
+    <Property Name="CANTIDAD" Type="Int32" />
+    <Property Name="ESTADO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="INVENTARIO_PDV" Relationship="mobLibraryModel.ORIGEN_FK" FromRole="SOLICITUD_TRASLADO" ToRole="INVENTARIO_PDV" />
+    <NavigationProperty Name="PUNTO_VENTA" Relationship="mobLibraryModel.DESTINO_FK" FromRole="SOLICITUD_TRASLADO" ToRole="PUNTO_VENTA" />
+    <NavigationProperty Name="USUARIO" Relationship="mobLibraryModel.SOLICITUD_TRASLADO_USUARIO_FK" FromRole="SOLICITUD_TRASLADO" ToRole="USUARIO" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="ID_USUARIO" />
+    </Key>
+    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="APELLIDO1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="APELLIDO2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FECHA_NACIMIENTO" Type="DateTime" Precision="0" />
+    <Property Name="DIRECCION" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="USERNAME" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="LISTA_LIBROS" Relationship="mobLibraryModel.LISTA_LIBROS_USUARIO_FK" FromRole="USUARIO" ToRole="LISTA_LIBROS" />
+    <NavigationProperty Name="SOLICITUD_PEDIDO" Relationship="mobLibraryModel.SOLICITUD_PEDIDO_USUARIO_FK" FromRole="USUARIO" ToRole="SOLICITUD_PEDIDO" />
+    <NavigationProperty Name="SOLICITUD_TRASLADO" Relationship="mobLibraryModel.SOLICITUD_TRASLADO_USUARIO_FK" FromRole="USUARIO" ToRole="SOLICITUD_TRASLADO" />
+    <NavigationProperty Name="GENERO" Relationship="mobLibraryModel.GENERO_FAVORITO" FromRole="USUARIO" ToRole="GENERO" />
+  </EntityType>
+  <Association Name="LIBRERIA_FK">
+    <End Role="CADENA_LIBRERIAS" Type="mobLibraryModel.CADENA_LIBRERIAS" Multiplicity="1" />
+    <End Role="CATALOGO_LIBRERIA" Type="mobLibraryModel.CATALOGO_LIBRERIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CADENA_LIBRERIAS">
+        <PropertyRef Name="ID_LIBRERIA" />
+      </Principal>
+      <Dependent Role="CATALOGO_LIBRERIA">
+        <PropertyRef Name="ID_LIBRERIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PUNTO_VENTA_FK">
+    <End Role="CADENA_LIBRERIAS" Type="mobLibraryModel.CADENA_LIBRERIAS" Multiplicity="1" />
+    <End Role="PUNTO_VENTA" Type="mobLibraryModel.PUNTO_VENTA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CADENA_LIBRERIAS">
+        <PropertyRef Name="ID_LIBRERIA" />
+      </Principal>
+      <Dependent Role="PUNTO_VENTA">
+        <PropertyRef Name="ID_LIBRERIA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INVENTARIO_PDV_LIBRO_FK">
+    <End Role="CATALOGO_LIBRERIA" Type="mobLibraryModel.CATALOGO_LIBRERIA" Multiplicity="1" />
+    <End Role="INVENTARIO_PDV" Type="mobLibraryModel.INVENTARIO_PDV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATALOGO_LIBRERIA">
+        <PropertyRef Name="ID_LIBRERIA" />
+        <PropertyRef Name="ISBN" />
+      </Principal>
+      <Dependent Role="INVENTARIO_PDV">
+        <PropertyRef Name="ID_LIBRERIA" />
+        <PropertyRef Name="ISBN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LIBRO_FK">
+    <End Role="LIBRO" Type="mobLibraryModel.LIBRO" Multiplicity="1" />
+    <End Role="CATALOGO_LIBRERIA" Type="mobLibraryModel.CATALOGO_LIBRERIA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIBRO">
+        <PropertyRef Name="ISBN" />
+      </Principal>
+      <Dependent Role="CATALOGO_LIBRERIA">
+        <PropertyRef Name="ISBN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ORIGEN_FK">
+    <End Role="INVENTARIO_PDV" Type="mobLibraryModel.INVENTARIO_PDV" Multiplicity="1" />
+    <End Role="SOLICITUD_TRASLADO" Type="mobLibraryModel.SOLICITUD_TRASLADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTARIO_PDV">
+        <PropertyRef Name="ID_LIBRERIA" />
+        <PropertyRef Name="ID_PDV" />
+        <PropertyRef Name="ISBN" />
+      </Principal>
+      <Dependent Role="SOLICITUD_TRASLADO">
+        <PropertyRef Name="ID_LIBRERIA" />
+        <PropertyRef Name="ID_PDV_ORIGEN" />
+        <PropertyRef Name="ISBN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PDV_FK">
+    <End Role="PUNTO_VENTA" Type="mobLibraryModel.PUNTO_VENTA" Multiplicity="1" />
+    <End Role="INVENTARIO_PDV" Type="mobLibraryModel.INVENTARIO_PDV" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PUNTO_VENTA">
+        <PropertyRef Name="ID_PDV" />
+      </Principal>
+      <Dependent Role="INVENTARIO_PDV">
+        <PropertyRef Name="ID_PDV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SOLICITUD_PEDIDO_LIBRO_FK">
+    <End Role="INVENTARIO_PDV" Type="mobLibraryModel.INVENTARIO_PDV" Multiplicity="1" />
+    <End Role="SOLICITUD_PEDIDO" Type="mobLibraryModel.SOLICITUD_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTARIO_PDV">
+        <PropertyRef Name="ID_LIBRERIA" />
+        <PropertyRef Name="ID_PDV" />
+        <PropertyRef Name="ISBN" />
+      </Principal>
+      <Dependent Role="SOLICITUD_PEDIDO">
+        <PropertyRef Name="ID_LIBRERIA" />
+        <PropertyRef Name="ID_PDV" />
+        <PropertyRef Name="ISBN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LISTA_LIBROS_LIBRO_FK">
+    <End Role="LIBRO" Type="mobLibraryModel.LIBRO" Multiplicity="1" />
+    <End Role="LISTA_LIBROS" Type="mobLibraryModel.LISTA_LIBROS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIBRO">
+        <PropertyRef Name="ISBN" />
+      </Principal>
+      <Dependent Role="LISTA_LIBROS">
+        <PropertyRef Name="ISBN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LISTA_LIBROS_USUARIO_FK">
+    <End Role="USUARIO" Type="mobLibraryModel.USUARIO" Multiplicity="1" />
+    <End Role="LISTA_LIBROS" Type="mobLibraryModel.LISTA_LIBROS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="ID_USUARIO" />
+      </Principal>
+      <Dependent Role="LISTA_LIBROS">
+        <PropertyRef Name="ID_USUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DESTINO_FK">
+    <End Role="PUNTO_VENTA" Type="mobLibraryModel.PUNTO_VENTA" Multiplicity="1" />
+    <End Role="SOLICITUD_TRASLADO" Type="mobLibraryModel.SOLICITUD_TRASLADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PUNTO_VENTA">
+        <PropertyRef Name="ID_PDV" />
+      </Principal>
+      <Dependent Role="SOLICITUD_TRASLADO">
+        <PropertyRef Name="ID_PDV_ORIGEN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SOLICITUD_PEDIDO_USUARIO_FK">
+    <End Role="USUARIO" Type="mobLibraryModel.USUARIO" Multiplicity="1" />
+    <End Role="SOLICITUD_PEDIDO" Type="mobLibraryModel.SOLICITUD_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="ID_USUARIO" />
+      </Principal>
+      <Dependent Role="SOLICITUD_PEDIDO">
+        <PropertyRef Name="ID_USUARIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SOLICITUD_TRASLADO_USUARIO_FK">
+    <End Role="USUARIO" Type="mobLibraryModel.USUARIO" Multiplicity="1" />
+    <End Role="SOLICITUD_TRASLADO" Type="mobLibraryModel.SOLICITUD_TRASLADO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="ID_USUARIO" />
+      </Principal>
+      <Dependent Role="SOLICITUD_TRASLADO">
+        <PropertyRef Name="ID_PDV_DESTINO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GENERO_FAVORITO">
+    <End Role="GENERO" Type="mobLibraryModel.GENERO" Multiplicity="*" />
+    <End Role="USUARIO" Type="mobLibraryModel.USUARIO" Multiplicity="*" />
+  </Association>
+  <Association Name="GENERO_LIBRO">
+    <End Role="GENERO" Type="mobLibraryModel.GENERO" Multiplicity="*" />
+    <End Role="LIBRO" Type="mobLibraryModel.LIBRO" Multiplicity="*" />
+  </Association>
+</Schema>

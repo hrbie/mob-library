@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7432c15186584c5baa762d1942d41bb3" Name="Diagram1">
+        <EntityTypeShape EntityType="mobLibraryModel.CADENA_LIBRERIAS" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobLibraryModel.CATALOGO_LIBRERIA" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobLibraryModel.GENERO" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobLibraryModel.INVENTARIO_PDV" Width="1.5" PointX="7.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobLibraryModel.LIBRO" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobLibraryModel.LISTA_LIBROS" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobLibraryModel.PUNTO_VENTA" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobLibraryModel.SOLICITUD_PEDIDO" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobLibraryModel.SOLICITUD_TRASLADO" Width="1.5" PointX="8.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="mobLibraryModel.USUARIO" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="mobLibraryModel.LIBRERIA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.PUNTO_VENTA_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.INVENTARIO_PDV_LIBRO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.LIBRO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.ORIGEN_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.PDV_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.SOLICITUD_PEDIDO_LIBRO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.LISTA_LIBROS_LIBRO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.LISTA_LIBROS_USUARIO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.DESTINO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.SOLICITUD_PEDIDO_USUARIO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.SOLICITUD_TRASLADO_USUARIO_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.GENERO_FAVORITO" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.GENERO_LIBRO" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

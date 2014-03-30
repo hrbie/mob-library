@@ -1,0 +1,84 @@
+﻿@model mobLibrary.Models.LIBRO
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>LIBRO</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ISBN)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ISBN)
+            @Html.ValidationMessageFor(model => model.ISBN)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NOMBRE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NOMBRE)
+            @Html.ValidationMessageFor(model => model.NOMBRE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AUTOR)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AUTOR)
+            @Html.ValidationMessageFor(model => model.AUTOR)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EDITORIAL)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EDITORIAL)
+            @Html.ValidationMessageFor(model => model.EDITORIAL)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PRECIO)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PRECIO)
+            @Html.ValidationMessageFor(model => model.PRECIO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ANIO)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ANIO)
+            @Html.ValidationMessageFor(model => model.ANIO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CALIFICACION)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CALIFICACION)
+            @Html.ValidationMessageFor(model => model.CALIFICACION)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

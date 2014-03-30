@@ -1,0 +1,64 @@
+﻿@model mobLibrary.Models.LIBRO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>LIBRO</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ISBN)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ISBN)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NOMBRE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AUTOR)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AUTOR)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EDITORIAL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EDITORIAL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PRECIO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PRECIO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ANIO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ANIO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CALIFICACION)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CALIFICACION)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

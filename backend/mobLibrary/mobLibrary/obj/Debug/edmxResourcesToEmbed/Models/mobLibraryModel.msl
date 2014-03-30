@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mobLibraryModelStoreContainer" CdmEntityContainer="mobLibraryEntities">
+    <EntitySetMapping Name="CADENA_LIBRERIAS">
+      <EntityTypeMapping TypeName="mobLibraryModel.CADENA_LIBRERIAS">
+        <MappingFragment StoreEntitySet="CADENA_LIBRERIAS">
+          <ScalarProperty Name="ID_LIBRERIA" ColumnName="ID_LIBRERIA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATALOGO_LIBRERIA">
+      <EntityTypeMapping TypeName="mobLibraryModel.CATALOGO_LIBRERIA">
+        <MappingFragment StoreEntitySet="CATALOGO_LIBRERIA">
+          <ScalarProperty Name="ID_LIBRERIA" ColumnName="ID_LIBRERIA" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GENERO">
+      <EntityTypeMapping TypeName="mobLibraryModel.GENERO">
+        <MappingFragment StoreEntitySet="GENERO">
+          <ScalarProperty Name="ID_GENERO" ColumnName="ID_GENERO" />
+          <ScalarProperty Name="GENERO1" ColumnName="GENERO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTARIO_PDV">
+      <EntityTypeMapping TypeName="mobLibraryModel.INVENTARIO_PDV">
+        <MappingFragment StoreEntitySet="INVENTARIO_PDV">
+          <ScalarProperty Name="ID_LIBRERIA" ColumnName="ID_LIBRERIA" />
+          <ScalarProperty Name="ID_PDV" ColumnName="ID_PDV" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="CANTIDAD_DISPONIBLE" ColumnName="CANTIDAD_DISPONIBLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIBRO">
+      <EntityTypeMapping TypeName="mobLibraryModel.LIBRO">
+        <MappingFragment StoreEntitySet="LIBRO">
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="AUTOR" ColumnName="AUTOR" />
+          <ScalarProperty Name="EDITORIAL" ColumnName="EDITORIAL" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="ANIO" ColumnName="ANIO" />
+          <ScalarProperty Name="CALIFICACION" ColumnName="CALIFICACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LISTA_LIBROS">
+      <EntityTypeMapping TypeName="mobLibraryModel.LISTA_LIBROS">
+        <MappingFragment StoreEntitySet="LISTA_LIBROS">
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="CALIFICACION" ColumnName="CALIFICACION" />
+          <ScalarProperty Name="OPINION" ColumnName="OPINION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PUNTO_VENTA">
+      <EntityTypeMapping TypeName="mobLibraryModel.PUNTO_VENTA">
+        <MappingFragment StoreEntitySet="PUNTO_VENTA">
+          <ScalarProperty Name="ID_PDV" ColumnName="ID_PDV" />
+          <ScalarProperty Name="ID_LIBRERIA" ColumnName="ID_LIBRERIA" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DIRECCIÓN" ColumnName="DIRECCIÓN" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="LATITUD" ColumnName="LATITUD" />
+          <ScalarProperty Name="LONGITUD" ColumnName="LONGITUD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOLICITUD_PEDIDO">
+      <EntityTypeMapping TypeName="mobLibraryModel.SOLICITUD_PEDIDO">
+        <MappingFragment StoreEntitySet="SOLICITUD_PEDIDO">
+          <ScalarProperty Name="ID_PEDIDO" ColumnName="ID_PEDIDO" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="ID_LIBRERIA" ColumnName="ID_LIBRERIA" />
+          <ScalarProperty Name="ID_PDV" ColumnName="ID_PDV" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SOLICITUD_TRASLADO">
+      <EntityTypeMapping TypeName="mobLibraryModel.SOLICITUD_TRASLADO">
+        <MappingFragment StoreEntitySet="SOLICITUD_TRASLADO">
+          <ScalarProperty Name="ID_TRASLADO" ColumnName="ID_TRASLADO" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="ID_LIBRERIA" ColumnName="ID_LIBRERIA" />
+          <ScalarProperty Name="ID_PDV_ORIGEN" ColumnName="ID_PDV_ORIGEN" />
+          <ScalarProperty Name="ID_PDV_DESTINO" ColumnName="ID_PDV_DESTINO" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+          <ScalarProperty Name="CANTIDAD" ColumnName="CANTIDAD" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="mobLibraryModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO1" ColumnName="APELLIDO1" />
+          <ScalarProperty Name="APELLIDO2" ColumnName="APELLIDO2" />
+          <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="GENERO_FAVORITO" TypeName="mobLibraryModel.GENERO_FAVORITO" StoreEntitySet="GENERO_FAVORITO">
+      <EndProperty Name="GENERO">
+        <ScalarProperty Name="ID_GENERO" ColumnName="ID_GENERO" />
+      </EndProperty>
+      <EndProperty Name="USUARIO">
+        <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="GENERO_LIBRO" TypeName="mobLibraryModel.GENERO_LIBRO" StoreEntitySet="GENERO_LIBRO">
+      <EndProperty Name="GENERO">
+        <ScalarProperty Name="ID_GENERO" ColumnName="ID_GENERO" />
+      </EndProperty>
+      <EndProperty Name="LIBRO">
+        <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
