@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">mobLibrary2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="nombre_aplicacion">mobLibrary</string>
+    <string name="space"/>
+    <string name="usuario">Usuario:</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="entrar">Entrar</string>
+    <string name="buscar">Buscar Libro</string>
+    <string name="ubicar">Ubicar Libreria</string>
+    <string name="proximo">Proximas Lecturas</string>
+    <string name="recomendar">Recomendar Libro</string>
+    <string name="editar">Editar Perfil</string>
+    <string name="salir">Salir</string>
+    <string name="atras">Atras</string>
+    <string name="titulobuscar">Buscar </string>
+    <string name="libreria">Libreria:</string>
+    <string name="tipoBuscar">Buscar por</string>
+
+</resources>
