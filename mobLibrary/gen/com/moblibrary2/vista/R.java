@@ -27,7 +27,7 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090012;
+        public static final int action_settings=0x7f09001c;
         public static final int btnAtras=0x7f090000;
         public static final int btnBuscar=0x7f090008;
         public static final int btnEditar=0x7f090010;
@@ -35,14 +35,24 @@ public final class R {
         public static final int btnRecomendar=0x7f09000f;
         public static final int btnSalir=0x7f090011;
         public static final int btnUbicar=0x7f09000d;
+        public static final int lblAno=0x7f090019;
+        public static final int lblAutor=0x7f09001a;
         public static final int lblBuscar=0x7f090006;
+        public static final int lblBusqueda=0x7f090016;
         public static final int lblLibreria=0x7f090002;
+        public static final int lblNombre=0x7f090018;
+        public static final int lblNombreLibreria=0x7f090014;
         public static final int lblPass=0x7f09000b;
+        public static final int lblResultadoBusqueda=0x7f090012;
+        public static final int lblTempBusqueda=0x7f090015;
+        public static final int lblTempNombreLibreria=0x7f090013;
         public static final int lblTipoBuscar=0x7f090004;
         public static final int lblTitulo=0x7f090001;
         public static final int lblUsuario=0x7f090009;
+        public static final int rl_country_heading=0x7f090017;
         public static final int spnLibreria=0x7f090003;
         public static final int spnTipoBusqueda=0x7f090005;
+        public static final int tabla_resultados=0x7f09001b;
         public static final int txtBuscar=0x7f090007;
         public static final int txtPass=0x7f09000c;
         public static final int txtUsuario=0x7f09000a;
@@ -51,23 +61,28 @@ public final class R {
         public static final int activity_buscar=0x7f030000;
         public static final int activity_principal=0x7f030001;
         public static final int activty_menu=0x7f030002;
+        public static final int activty_resultados=0x7f030003;
     }
     public static final class menu {
         public static final int activity_principal=0x7f080000;
     }
     public static final class string {
         public static final int action_settings=0x7f060001;
+        public static final int ano=0x7f060015;
         public static final int app_name=0x7f060000;
         public static final int atras=0x7f06000e;
+        public static final int autor=0x7f060014;
         public static final int buscar=0x7f060008;
         public static final int contrasena=0x7f060006;
         public static final int editar=0x7f06000c;
         public static final int entrar=0x7f060007;
         public static final int hello_world=0x7f060002;
         public static final int libreria=0x7f060010;
+        public static final int nombre=0x7f060013;
         public static final int nombre_aplicacion=0x7f060003;
         public static final int proximo=0x7f06000a;
         public static final int recomendar=0x7f06000b;
+        public static final int resultado=0x7f060012;
         public static final int salir=0x7f06000d;
         public static final int space=0x7f060004;
         public static final int tipoBuscar=0x7f060011;

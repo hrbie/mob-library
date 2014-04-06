@@ -24,6 +24,7 @@
         </activity>
         <activity android:name="com.moblibrary2.vista.ActivityMenu"></activity>
         <activity android:name="com.moblibrary2.vista.ActivityBuscar"></activity>
+        <activity android:name="com.moblibrary2.vista.ActivityResultados"></activity>
     </application>
 
 </manifest>

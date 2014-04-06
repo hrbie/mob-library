@@ -3,11 +3,13 @@ package com.moblibrary2.vista;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -23,6 +25,13 @@ public class ActivityBuscar extends Activity {
 	AdapterLibreria adapter_libreria;
 	ArrayAdapter<?> adapter_tipo_busqueda;
 	TestDBO test_DBO = new TestDBO();
+	
+	int posicion_nombreLibreria;
+	int posicion_tipoBuscar;
+	String nombreLibreria;
+	String tipoBuscar;
+	String buscar;
+			
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +51,7 @@ public class ActivityBuscar extends Activity {
 		
 			public void onItemSelected(AdapterView<?> parentView, View selectedItemViewed,
 					int position, long id){
+				posicion_nombreLibreria = position;
 				Libreria libreria = adapter_libreria.getItem(position);
 				Toast.makeText(ActivityBuscar.this, "ID: " + libreria.getId() + "\nNombre: "
 				+ libreria.getNombreLibreria(), Toast.LENGTH_SHORT).show();
@@ -61,9 +71,20 @@ public class ActivityBuscar extends Activity {
 		adapter_tipo_busqueda.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spnTipoBusqueda.setAdapter(adapter_tipo_busqueda);
 		
+		tipoBuscar = (String) spnTipoBusqueda.getSelectedItem();
 		
-		
-		
-			
 	}
+	
+	public void llamar_activity_resultados(View view) {
+		EditText et1;
+		nombreLibreria = adapter_libreria.getItem(posicion_nombreLibreria).getNombreLibreria();
+		et1 = (EditText) findViewById(R.id.txtBuscar);
+		buscar = et1.getText().toString();
+		
+		Intent resultado = new Intent(this, ActivityResultados.class);
+		resultado.putExtra("nombreLibreria", nombreLibreria);
+		resultado.putExtra("tipoBuscar", tipoBuscar);
+		resultado.putExtra("Buscar", buscar);
+		startActivity(resultado);
+		}
 }
