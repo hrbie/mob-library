@@ -84,3 +84,4 @@ C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\obj
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\obj\Release\mobLibrary.pdb
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\Facebook.dll
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\Facebook.xml
+C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\obj\Release\mobLibrary.csprojResolveAssemblyReference.cache

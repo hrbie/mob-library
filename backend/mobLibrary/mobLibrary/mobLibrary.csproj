@@ -187,8 +187,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CadenaLibreriasAPIController.cs" />
+    <Compile Include="Controllers\CadenaLibreriasController.cs" />
+    <Compile Include="Controllers\LibroAPI2Controller.cs" />
+    <Compile Include="Controllers\GeneroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LibroController.cs" />
+    <Compile Include="Controllers\LibroAPIController.cs" />
+    <Compile Include="Controllers\UsuarioAPIController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -374,6 +380,16 @@
     <Content Include="Views\Libro\Create.cshtml" />
     <Content Include="Views\Libro\Edit.cshtml" />
     <Content Include="Views\Libro\Delete.cshtml" />
+    <Content Include="Views\CadenaLibrerias\Index.cshtml" />
+    <Content Include="Views\CadenaLibrerias\Details.cshtml" />
+    <Content Include="Views\CadenaLibrerias\Create.cshtml" />
+    <Content Include="Views\CadenaLibrerias\Edit.cshtml" />
+    <Content Include="Views\CadenaLibrerias\Delete.cshtml" />
+    <Content Include="Views\Genero\Index.cshtml" />
+    <Content Include="Views\Genero\Details.cshtml" />
+    <Content Include="Views\Genero\Create.cshtml" />
+    <Content Include="Views\Genero\Edit.cshtml" />
+    <Content Include="Views\Genero\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,40 @@
+﻿@model mobLibrary.Models.CADENA_LIBRERIAS
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>CADENA_LIBRERIAS</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_LIBRERIA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_LIBRERIA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NOMBRE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DESCRIPCION)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DESCRIPCION)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
