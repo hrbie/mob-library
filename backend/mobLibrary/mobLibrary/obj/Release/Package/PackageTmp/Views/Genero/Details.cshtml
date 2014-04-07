@@ -1,0 +1,29 @@
+﻿@model mobLibrary.Models.GENERO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>GENERO</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_GENERO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_GENERO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.GENERO1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GENERO1)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id=Model.ID_GENERO }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
