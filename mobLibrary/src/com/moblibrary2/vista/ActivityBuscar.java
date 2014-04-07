@@ -38,7 +38,7 @@ public class ActivityBuscar extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_buscar);
 		
-		/*e llenana los valores a mostrar del spnLibreria en este caso los valores son traidos de base de datos a la que se 
+		/*Se llenana los valores a mostrar del spnLibreria en este caso los valores son traidos de base de datos a la que se 
 		 encuentra asociado la aplicacion*/
 		ArrayList<Libreria> librerias = test_DBO.getLibrerias();
 		
