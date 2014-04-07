@@ -114,6 +114,12 @@ namespace mobLibrary.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult AddBook(int id)
+        {
+            ViewBag.cadena = id;
+            return RedirectToAction("IndexCadenaAgregarLibro","LibroController",new {cadena = id});
+        }
+
         protected override void Dispose(bool disposing)
         {
             db.Dispose();

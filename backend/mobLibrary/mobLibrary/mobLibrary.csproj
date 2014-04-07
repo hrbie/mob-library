@@ -398,6 +398,7 @@
     <Content Include="Views\PuntoVenta\Create.cshtml" />
     <Content Include="Views\PuntoVenta\Edit.cshtml" />
     <Content Include="Views\PuntoVenta\Delete.cshtml" />
+    <Content Include="Views\Libro\IndexCadenaAgregarLibro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

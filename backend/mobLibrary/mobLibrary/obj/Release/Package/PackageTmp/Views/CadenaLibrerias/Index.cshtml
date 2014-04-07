@@ -37,7 +37,8 @@
         <td>
             @Html.ActionLink("Edit", "Edit", new {  id=item.ID_LIBRERIA  }) |
             @Html.ActionLink("Details", "Details", new {  id=item.ID_LIBRERIA  }) |
-            @Html.ActionLink("Delete", "Delete", new {  id=item.ID_LIBRERIA  })
+            @Html.ActionLink("Delete", "Delete", new {  id=item.ID_LIBRERIA  }) | 
+            @Html.ActionLink("Agregar Libro", "AddBook", new {  id=item.ID_LIBRERIA  }) | 
         </td>
     </tr>
 }

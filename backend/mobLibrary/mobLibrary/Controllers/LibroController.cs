@@ -114,6 +114,28 @@ namespace mobLibrary.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult IndexCadenaAgregarLibro(int cadena) {
+            //agregar acá el filtro para no agregar libros que  ya están.
+            return View(db.LIBRO.ToList());
+        }
+
+        public ActionResult AgregarLibroACadena(int cadena, int libro)
+        {
+            CATALOGO_LIBRERIA c = new CATALOGO_LIBRERIA();
+            c.ID_LIBRERIA = cadena;
+            c.ISBN = libro;
+
+            if (ModelState.IsValid)
+            {
+                db.CATALOGO_LIBRERIA.Add(c);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            //Cambiarlo a mostrar libros de la cadena
+            return RedirectToAction("Index");
+        }
+
         protected override void Dispose(bool disposing)
         {
             db.Dispose();

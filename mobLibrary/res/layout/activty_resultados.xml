@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/lblResultadoBusqueda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/resultado"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/lblTempNombreLibreria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/libreria" />
+
+    <TextView
+        android:id="@+id/lblNombreLibreria"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/space" />
+
+    <TextView
+        android:id="@+id/lblTempBusqueda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/titulobuscar" />
+
+    <TextView
+        android:id="@+id/lblBusqueda"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/space" />
+     <RelativeLayout
+        android:id="@+id/rl_country_heading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#555555" >
+
+        <TextView
+            android:id="@+id/lblNombre"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/nombre"
+            android:textColor="#FFFFFF"
+            android:textSize="18dip"
+            android:textStyle="normal|bold" >
+            
+        </TextView>
+
+        <TextView
+            android:id="@+id/lblAno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="430dp"
+            android:layout_toRightOf="@+id/lblAutor"
+            android:text="@string/ano"
+            android:textColor="#FFFFFF"
+            android:textSize="18dip"
+            android:textStyle="normal|bold"/>
+
+        <TextView
+            android:id="@+id/lblAutor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_toRightOf="@+id/lblNombre"
+            android:text="@string/autor"
+            android:textColor="#FFFFFF"
+            android:textSize="18dip"
+            android:textStyle="normal|bold" />
+
+    </RelativeLayout>
+    
+    <TableLayout
+                android:id="@+id/tabla_resultados"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:stretchColumns="0,1,2" >
+            </TableLayout>
+
+</LinearLayout>
