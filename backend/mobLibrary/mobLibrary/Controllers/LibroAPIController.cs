@@ -16,14 +16,14 @@ namespace mobLibrary.Controllers
     {
         private mobLibraryEntities db = new mobLibraryEntities();
 
-        // GET api/LibroControllerAPI
+        // GET api/LibroControllerAPI/GetLIBROs
         [HttpGet]
         public IEnumerable<LIBRO> GetLIBROs()
         {
             return db.LIBRO.AsEnumerable();
         }
 
-        // GET api/LibroControllerAPI/5
+        // GET api/LibroControllerAPI/GetLIBRO/5
         [HttpGet]
         public LIBRO GetLIBRO(long id)
         {
@@ -36,6 +36,7 @@ namespace mobLibrary.Controllers
             return libro;
         }
 
+        // GET api/LibroControllerAPI/GetLIBROByName/{nombre}
         [HttpGet]
         public IEnumerable<LIBRO> GetLIBROByName(string id)
         {
@@ -48,6 +49,7 @@ namespace mobLibrary.Controllers
             return libro;
         }
 
+        // GET api/LibroControllerAPI/GetLIBROByAuthor/{nombre}
         [HttpGet]
         public IEnumerable<LIBRO> GetLIBROByAuthor(string id)
         {
@@ -60,6 +62,7 @@ namespace mobLibrary.Controllers
             return libro;
         }
 
+        // GET api/LibroControllerAPI/GetLIBROByGenero/{nombre}
         [HttpGet]
         public IEnumerable<LIBRO> GetLIBROByGenero(string id)
         {
@@ -73,6 +76,7 @@ namespace mobLibrary.Controllers
             return libro;
         }
         
+        // GET api/LibroControllerAPI/GetLIBROByAnio/{anio}
         [HttpGet]
         public IEnumerable<LIBRO> GetLIBROByAnio(int id)
         {

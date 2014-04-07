@@ -157,7 +157,7 @@ namespace mobLibrary.Controllers
 
             return Request.CreateResponse(HttpStatusCode.OK, libro);
         }
-
+        
         protected override void Dispose(bool disposing)
         {
             db.Dispose();

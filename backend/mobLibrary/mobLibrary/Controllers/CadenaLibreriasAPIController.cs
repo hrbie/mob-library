@@ -16,7 +16,7 @@ namespace mobLibrary.Controllers
     {
         private mobLibraryEntities db = new mobLibraryEntities();
 
-        // GET api/CadenaLibreriasAPI
+        // GET api/CadenaLibreriasAPI/GetCADENA_LIBRERIAS
         [HttpGet]
         public IEnumerable<CADENA_LIBRERIAS> GetCADENA_LIBRERIAS()
         {

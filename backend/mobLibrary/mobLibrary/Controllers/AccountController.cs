@@ -10,6 +10,7 @@ using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 //using mobLibrary.Filters;
 using mobLibrary.Models;
+using System.Threading.Tasks;
 
 namespace mobLibrary.Controllers
 {
@@ -60,7 +61,6 @@ namespace mobLibrary.Controllers
         //
         // GET: /Account/Register
 
-        [AllowAnonymous]
         public ActionResult Register()
         {
             return View();
@@ -70,7 +70,6 @@ namespace mobLibrary.Controllers
         // POST: /Account/Register
 
         [HttpPost]
-        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public ActionResult Register(RegisterModel model)
         {
@@ -356,6 +355,8 @@ namespace mobLibrary.Controllers
             return PartialView("_RemoveExternalLoginsPartial", externalLogins);
         }
 
+        
+
         #region Helpers
         private ActionResult RedirectToLocal(string returnUrl)
         {
@@ -432,4 +433,5 @@ namespace mobLibrary.Controllers
         }
         #endregion
     }
+
 }
