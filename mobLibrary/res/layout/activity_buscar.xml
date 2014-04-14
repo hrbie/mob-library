@@ -3,18 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-    <Button
-        android:id="@+id/btnAtras"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/atras" />
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ActivityBuscar" >
 
     <TextView
         android:id="@+id/lblTitulo"
@@ -24,7 +18,7 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="2dp"
-        android:text="@string/buscar"
+        android:text="@string/buscar_menu"
         android:textSize="35dp"
         tools:ignore="SpUsage" />
 
@@ -101,7 +95,7 @@
 
         <requestFocus />
     </EditText>
-
+    
     <Button
         android:id="@+id/btnBuscar"
         style="?android:attr/buttonStyleSmall"
@@ -112,8 +106,13 @@
         android:layout_marginLeft="40dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="2dp"
-        
         android:onClick="llamar_activity_resultados"
-        android:text="@string/titulobuscar" />
+        android:text="@string/buscar_menu" />
 
+    <TextView
+        android:id="@+id/txtError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+ 
 </LinearLayout>
