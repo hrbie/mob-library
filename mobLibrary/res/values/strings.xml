@@ -21,5 +21,16 @@
     <string name="autor">Autor</string>
     <string name="ano">Año</string>
     <string name="resultado">Resultado de la Busqueda</string>
+    
+    <string name="APP_ID">806692742691470</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="row_nombre_libro">Libro: </string>
+    <string name="row_autor_libro">Autor: </string>
+    <string name="row_ano_libro">Año: </string>
+    <string name="nombre_libro">Nombre del Libro</string>
+    <string name="editorial">Editorial</string>
+    <string name="precio">Precio</string>
+    <string name="cantidad_ejemplares">Cantidad de Ejemplares</string>
+    
 
 </resources>
