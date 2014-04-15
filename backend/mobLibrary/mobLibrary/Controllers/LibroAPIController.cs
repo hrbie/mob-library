@@ -123,7 +123,24 @@ namespace mobLibrary.Controllers
             return libro;
         }
 
+        public IEnumerable<LIBRO> GetLIBROByLibreria(int id)
+        {
+            //seleccionar los libros tq esté asociado en el catálogo de la librería
+            IEnumerable<CATALOGO_LIBRERIA> catalogo = db.CATALOGO_LIBRERIA.Where(c => c.ID_LIBRERIA == id);
+            
+            List<long> ISBNs = new List<long>();
+            foreach (CATALOGO_LIBRERIA c in catalogo){
+                ISBNs.Add(c.ISBN);
+            }
 
+            IEnumerable<LIBRO> libro = db.LIBRO.Where( l => ISBNs.Contains(l.ISBN));
+            if (libro == null)
+            {
+                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
+            }
+
+            return libro;
+        }
 
 
 

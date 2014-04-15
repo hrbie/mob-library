@@ -1,0 +1,43 @@
+﻿@model mobLibrary.Models.LISTA_LIBROS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>LISTA_LIBROS</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.USUARIO.NOMBRE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.USUARIO.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LIBRO.NOMBRE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LIBRO.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CALIFICACION)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CALIFICACION)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.OPINION)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.OPINION)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

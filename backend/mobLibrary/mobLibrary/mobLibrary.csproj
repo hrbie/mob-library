@@ -189,13 +189,21 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CadenaLibreriasAPIController.cs" />
     <Compile Include="Controllers\CadenaLibreriasController.cs" />
+    <Compile Include="Controllers\CatalogoLibreriaController.cs" />
+    <Compile Include="Controllers\GeneroAPIController.cs" />
+    <Compile Include="Controllers\InventarioPDVController.cs" />
     <Compile Include="Controllers\LibroAPI2Controller.cs" />
     <Compile Include="Controllers\GeneroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LibroController.cs" />
     <Compile Include="Controllers\LibroAPIController.cs" />
+    <Compile Include="Controllers\ListaLibrosAPIController.cs" />
+    <Compile Include="Controllers\ListaLibrosController.cs" />
     <Compile Include="Controllers\PuntoVentaController.cs" />
+    <Compile Include="Controllers\SolicitudPedidoController.cs" />
+    <Compile Include="Controllers\SolicitudTrasladoController.cs" />
     <Compile Include="Controllers\UsuarioAPIController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -399,6 +407,36 @@
     <Content Include="Views\PuntoVenta\Edit.cshtml" />
     <Content Include="Views\PuntoVenta\Delete.cshtml" />
     <Content Include="Views\Libro\IndexCadenaAgregarLibro.cshtml" />
+    <Content Include="Views\CatalogoLibreria\Index.cshtml" />
+    <Content Include="Views\CatalogoLibreria\Details.cshtml" />
+    <Content Include="Views\CatalogoLibreria\Create.cshtml" />
+    <Content Include="Views\CatalogoLibreria\Edit.cshtml" />
+    <Content Include="Views\CatalogoLibreria\Delete.cshtml" />
+    <Content Include="Views\InventarioPDV\Index.cshtml" />
+    <Content Include="Views\InventarioPDV\Details.cshtml" />
+    <Content Include="Views\InventarioPDV\Create.cshtml" />
+    <Content Include="Views\InventarioPDV\Edit.cshtml" />
+    <Content Include="Views\InventarioPDV\Delete.cshtml" />
+    <Content Include="Views\ListaLibros\Index.cshtml" />
+    <Content Include="Views\ListaLibros\Details.cshtml" />
+    <Content Include="Views\ListaLibros\Create.cshtml" />
+    <Content Include="Views\ListaLibros\Edit.cshtml" />
+    <Content Include="Views\ListaLibros\Delete.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Usuario\Details.cshtml" />
+    <Content Include="Views\Usuario\Create.cshtml" />
+    <Content Include="Views\Usuario\Edit.cshtml" />
+    <Content Include="Views\Usuario\Delete.cshtml" />
+    <Content Include="Views\SolicitudPedido\Index.cshtml" />
+    <Content Include="Views\SolicitudPedido\Details.cshtml" />
+    <Content Include="Views\SolicitudPedido\Create.cshtml" />
+    <Content Include="Views\SolicitudPedido\Edit.cshtml" />
+    <Content Include="Views\SolicitudPedido\Delete.cshtml" />
+    <Content Include="Views\SolicitudTraslado\Index.cshtml" />
+    <Content Include="Views\SolicitudTraslado\Details.cshtml" />
+    <Content Include="Views\SolicitudTraslado\Create.cshtml" />
+    <Content Include="Views\SolicitudTraslado\Edit.cshtml" />
+    <Content Include="Views\SolicitudTraslado\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

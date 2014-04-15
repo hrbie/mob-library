@@ -1,0 +1,71 @@
+﻿@model mobLibrary.Models.USUARIO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>USUARIO</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_USUARIO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_USUARIO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NOMBRE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.APELLIDO1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.APELLIDO1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.APELLIDO2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.APELLIDO2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FECHA_NACIMIENTO)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FECHA_NACIMIENTO)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DIRECCION)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DIRECCION)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EMAIL)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EMAIL)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.USERNAME)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.USERNAME)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

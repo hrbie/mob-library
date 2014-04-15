@@ -1,0 +1,29 @@
+﻿@model mobLibrary.Models.CATALOGO_LIBRERIA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CATALOGO_LIBRERIA</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CADENA_LIBRERIAS.NOMBRE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CADENA_LIBRERIAS.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LIBRO.NOMBRE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LIBRO.NOMBRE)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

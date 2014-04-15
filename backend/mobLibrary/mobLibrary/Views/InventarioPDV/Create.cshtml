@@ -1,0 +1,60 @@
+﻿@model mobLibrary.Models.INVENTARIO_PDV
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>INVENTARIO_PDV</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_LIBRERIA, "CATALOGO_LIBRERIA")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_LIBRERIA", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_LIBRERIA)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_PDV, "PUNTO_VENTA")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_PDV", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_PDV)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ISBN)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ISBN)
+            @Html.ValidationMessageFor(model => model.ISBN)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CANTIDAD_DISPONIBLE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CANTIDAD_DISPONIBLE)
+            @Html.ValidationMessageFor(model => model.CANTIDAD_DISPONIBLE)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

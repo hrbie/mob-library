@@ -1,0 +1,47 @@
+﻿@model mobLibrary.Models.INVENTARIO_PDV
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>INVENTARIO_PDV</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CATALOGO_LIBRERIA.ID_LIBRERIA)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CATALOGO_LIBRERIA.ID_LIBRERIA)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PUNTO_VENTA.NOMBRE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PUNTO_VENTA.NOMBRE)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ISBN)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ISBN)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CANTIDAD_DISPONIBLE)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CANTIDAD_DISPONIBLE)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

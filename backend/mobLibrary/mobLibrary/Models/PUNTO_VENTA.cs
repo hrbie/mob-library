@@ -25,6 +25,7 @@ namespace mobLibrary.Models
         public string NOMBRE { get; set; }
         public string DIRECCIÓN { get; set; }
         public string TELEFONO { get; set; }
+
         public Nullable<double> LATITUD { get; set; }
         public Nullable<double> LONGITUD { get; set; }
     

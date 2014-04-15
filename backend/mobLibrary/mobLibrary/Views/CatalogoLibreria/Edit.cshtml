@@ -1,0 +1,44 @@
+﻿@model mobLibrary.Models.CATALOGO_LIBRERIA
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>CATALOGO_LIBRERIA</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_LIBRERIA, "CADENA_LIBRERIAS")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_LIBRERIA", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_LIBRERIA)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ISBN, "LIBRO")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ISBN", String.Empty)
+            @Html.ValidationMessageFor(model => model.ISBN)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

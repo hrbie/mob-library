@@ -9,33 +9,33 @@ using mobLibrary.Models;
 
 namespace mobLibrary.Controllers
 {
-    public class CadenaLibreriasController : Controller
+    public class UsuarioController : Controller
     {
         private mobLibraryEntities db = new mobLibraryEntities();
 
         //
-        // GET: /CadenaLibrerias/
+        // GET: /Usuario/
 
         public ActionResult Index()
         {
-            return View(db.CADENA_LIBRERIAS.ToList());
+            return View(db.USUARIO.ToList());
         }
 
         //
-        // GET: /CadenaLibrerias/Details/5
+        // GET: /Usuario/Details/5
 
         public ActionResult Details(int id = 0)
         {
-            CADENA_LIBRERIAS cadena_librerias = db.CADENA_LIBRERIAS.Find(id);
-            if (cadena_librerias == null)
+            USUARIO usuario = db.USUARIO.Find(id);
+            if (usuario == null)
             {
                 return HttpNotFound();
             }
-            return View(cadena_librerias);
+            return View(usuario);
         }
 
         //
-        // GET: /CadenaLibrerias/Create
+        // GET: /Usuario/Create
 
         public ActionResult Create()
         {
@@ -43,81 +43,75 @@ namespace mobLibrary.Controllers
         }
 
         //
-        // POST: /CadenaLibrerias/Create
+        // POST: /Usuario/Create
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CADENA_LIBRERIAS cadena_librerias)
+        public ActionResult Create(USUARIO usuario)
         {
             if (ModelState.IsValid)
             {
-                db.CADENA_LIBRERIAS.Add(cadena_librerias);
+                db.USUARIO.Add(usuario);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(cadena_librerias);
+            return View(usuario);
         }
 
         //
-        // GET: /CadenaLibrerias/Edit/5
+        // GET: /Usuario/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
-            CADENA_LIBRERIAS cadena_librerias = db.CADENA_LIBRERIAS.Find(id);
-            if (cadena_librerias == null)
+            USUARIO usuario = db.USUARIO.Find(id);
+            if (usuario == null)
             {
                 return HttpNotFound();
             }
-            return View(cadena_librerias);
+            return View(usuario);
         }
 
         //
-        // POST: /CadenaLibrerias/Edit/5
+        // POST: /Usuario/Edit/5
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(CADENA_LIBRERIAS cadena_librerias)
+        public ActionResult Edit(USUARIO usuario)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(cadena_librerias).State = EntityState.Modified;
+                db.Entry(usuario).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(cadena_librerias);
+            return View(usuario);
         }
 
         //
-        // GET: /CadenaLibrerias/Delete/5
+        // GET: /Usuario/Delete/5
 
         public ActionResult Delete(int id = 0)
         {
-            CADENA_LIBRERIAS cadena_librerias = db.CADENA_LIBRERIAS.Find(id);
-            if (cadena_librerias == null)
+            USUARIO usuario = db.USUARIO.Find(id);
+            if (usuario == null)
             {
                 return HttpNotFound();
             }
-            return View(cadena_librerias);
+            return View(usuario);
         }
 
         //
-        // POST: /CadenaLibrerias/Delete/5
+        // POST: /Usuario/Delete/5
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            CADENA_LIBRERIAS cadena_librerias = db.CADENA_LIBRERIAS.Find(id);
-            db.CADENA_LIBRERIAS.Remove(cadena_librerias);
+            USUARIO usuario = db.USUARIO.Find(id);
+            db.USUARIO.Remove(usuario);
             db.SaveChanges();
             return RedirectToAction("Index");
-        }
-
-        public ActionResult AddBook(int id)
-        {
-            
-            return RedirectToAction("IndexCadenaAgregarLibro","Libro",new {cadena = id});
         }
 
         protected override void Dispose(bool disposing)

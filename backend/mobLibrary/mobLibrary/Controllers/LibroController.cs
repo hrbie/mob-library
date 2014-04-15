@@ -116,6 +116,7 @@ namespace mobLibrary.Controllers
 
         public ActionResult IndexCadenaAgregarLibro(int cadena) {
             //agregar acá el filtro para no agregar libros que  ya están.
+            ViewBag.cadena = cadena;
             return View(db.LIBRO.ToList());
         }
 
