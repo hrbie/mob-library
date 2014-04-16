@@ -12,46 +12,43 @@ using mobLibrary.Models;
 
 namespace mobLibrary.Controllers
 {
-    public class CadenaLibreriasAPIController : ApiController
+    public class SolicitudPedidoAPIController : ApiController
     {
         private mobLibraryEntities db = new mobLibraryEntities();
 
-        // GET api/CadenaLibreriasAPI/GetCADENA_LIBRERIAS
-        [HttpGet]
-        public IEnumerable<CADENA_LIBRERIAS> GetCADENA_LIBRERIAS()
+        // GET api/SolicitudPedidoAPI
+        public IEnumerable<SOLICITUD_PEDIDO> GetSOLICITUD_PEDIDO()
         {
-            return db.CADENA_LIBRERIAS.Select(l => new {ID_LIBRERIA = l.ID_LIBRERIA,NOMBRE=l.NOMBRE,DESCRIPCION=l.DESCRIPCION}).ToList().Select(x => new CADENA_LIBRERIAS {ID_LIBRERIA = x.ID_LIBRERIA,NOMBRE=x.NOMBRE,DESCRIPCION=x.DESCRIPCION });
-            //return db.CADENA_LIBRERIAS.AsEnumerable();
+            var solicitud_pedido = db.SOLICITUD_PEDIDO.Include(s => s.INVENTARIO_PDV).Include(s => s.USUARIO);
+            return solicitud_pedido.AsEnumerable();
         }
 
-        // GET api/CadenaLibreriasAPI/5
-        [HttpGet]
-        public CADENA_LIBRERIAS GetCADENA_LIBRERIAS(int id)
+        // GET api/SolicitudPedidoAPI/5
+        public SOLICITUD_PEDIDO GetSOLICITUD_PEDIDO(int id)
         {
-            CADENA_LIBRERIAS cadena_librerias = db.CADENA_LIBRERIAS.Find(id);
-            if (cadena_librerias == null)
+            SOLICITUD_PEDIDO solicitud_pedido = db.SOLICITUD_PEDIDO.Find(id);
+            if (solicitud_pedido == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
             }
 
-            return cadena_librerias;
+            return solicitud_pedido;
         }
 
-        // PUT api/CadenaLibreriasAPI/5
-        [HttpPut]
-        public HttpResponseMessage PutCADENA_LIBRERIAS(int id, CADENA_LIBRERIAS cadena_librerias)
+        // PUT api/SolicitudPedidoAPI/5
+        public HttpResponseMessage PutSOLICITUD_PEDIDO(int id, SOLICITUD_PEDIDO solicitud_pedido)
         {
             if (!ModelState.IsValid)
             {
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
             }
 
-            if (id != cadena_librerias.ID_LIBRERIA)
+            if (id != solicitud_pedido.ID_PEDIDO)
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest);
             }
 
-            db.Entry(cadena_librerias).State = EntityState.Modified;
+            db.Entry(solicitud_pedido).State = EntityState.Modified;
 
             try
             {
@@ -65,17 +62,16 @@ namespace mobLibrary.Controllers
             return Request.CreateResponse(HttpStatusCode.OK);
         }
 
-        // POST api/CadenaLibreriasAPI
-        [HttpPost]
-        public HttpResponseMessage PostCADENA_LIBRERIAS(CADENA_LIBRERIAS cadena_librerias)
+        // POST api/SolicitudPedidoAPI
+        public HttpResponseMessage PostSOLICITUD_PEDIDO(SOLICITUD_PEDIDO solicitud_pedido)
         {
             if (ModelState.IsValid)
             {
-                db.CADENA_LIBRERIAS.Add(cadena_librerias);
+                db.SOLICITUD_PEDIDO.Add(solicitud_pedido);
                 db.SaveChanges();
 
-                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, cadena_librerias);
-                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = cadena_librerias.ID_LIBRERIA }));
+                HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, solicitud_pedido);
+                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = solicitud_pedido.ID_PEDIDO }));
                 return response;
             }
             else
@@ -84,17 +80,16 @@ namespace mobLibrary.Controllers
             }
         }
 
-        // DELETE api/CadenaLibreriasAPI/5
-        [HttpDelete]
-        public HttpResponseMessage DeleteCADENA_LIBRERIAS(int id)
+        // DELETE api/SolicitudPedidoAPI/5
+        public HttpResponseMessage DeleteSOLICITUD_PEDIDO(int id)
         {
-            CADENA_LIBRERIAS cadena_librerias = db.CADENA_LIBRERIAS.Find(id);
-            if (cadena_librerias == null)
+            SOLICITUD_PEDIDO solicitud_pedido = db.SOLICITUD_PEDIDO.Find(id);
+            if (solicitud_pedido == null)
             {
                 return Request.CreateResponse(HttpStatusCode.NotFound);
             }
 
-            db.CADENA_LIBRERIAS.Remove(cadena_librerias);
+            db.SOLICITUD_PEDIDO.Remove(solicitud_pedido);
 
             try
             {
@@ -105,7 +100,7 @@ namespace mobLibrary.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.NotFound, ex);
             }
 
-            return Request.CreateResponse(HttpStatusCode.OK, cadena_librerias);
+            return Request.CreateResponse(HttpStatusCode.OK, solicitud_pedido);
         }
 
         protected override void Dispose(bool disposing)
