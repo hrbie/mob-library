@@ -22,7 +22,7 @@ namespace mobLibrary
             //dbcontext.USUARIO.All(i => i.USERNAME != "Dan");
 
             WebSecurity.InitializeDatabaseConnection("prueba", "USUARIO", "ID_USUARIO", "USERNAME", autoCreateTables: true);
-            
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

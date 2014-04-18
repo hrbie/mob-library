@@ -20,7 +20,9 @@ namespace mobLibrary.Controllers
         [HttpGet]
         public IEnumerable<CADENA_LIBRERIAS> GetCADENA_LIBRERIAS()
         {
-            return db.CADENA_LIBRERIAS.Select(l => new {ID_LIBRERIA = l.ID_LIBRERIA,NOMBRE=l.NOMBRE,DESCRIPCION=l.DESCRIPCION}).ToList().Select(x => new CADENA_LIBRERIAS {ID_LIBRERIA = x.ID_LIBRERIA,NOMBRE=x.NOMBRE,DESCRIPCION=x.DESCRIPCION });
+            return db.CADENA_LIBRERIAS.Select(l => new { ID_LIBRERIA = l.ID_LIBRERIA, NOMBRE = l.NOMBRE, DESCRIPCION = l.DESCRIPCION }).ToList()
+                .Select(x => new CADENA_LIBRERIAS { ID_LIBRERIA = x.ID_LIBRERIA, NOMBRE = x.NOMBRE, DESCRIPCION = x.DESCRIPCION });
+
             //return db.CADENA_LIBRERIAS.AsEnumerable();
         }
 
@@ -28,7 +30,11 @@ namespace mobLibrary.Controllers
         [HttpGet]
         public CADENA_LIBRERIAS GetCADENA_LIBRERIAS(int id)
         {
-            CADENA_LIBRERIAS cadena_librerias = db.CADENA_LIBRERIAS.Find(id);
+            //CADENA_LIBRERIAS cadena_librerias = db.CADENA_LIBRERIAS.Find(id);
+ 
+            CADENA_LIBRERIAS cadena_librerias = db.CADENA_LIBRERIAS.Select(l => new { ID_LIBRERIA = l.ID_LIBRERIA, NOMBRE = l.NOMBRE, DESCRIPCION = l.DESCRIPCION }).ToList()
+                .Select(x => new CADENA_LIBRERIAS { ID_LIBRERIA = x.ID_LIBRERIA, NOMBRE = x.NOMBRE, DESCRIPCION = x.DESCRIPCION }).Where(t => t.ID_LIBRERIA == id).First();
+
             if (cadena_librerias == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));

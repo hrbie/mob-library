@@ -199,6 +199,7 @@
     <Compile Include="Controllers\LibroAPIController.cs" />
     <Compile Include="Controllers\ListaLibrosAPIController.cs" />
     <Compile Include="Controllers\ListaLibrosController.cs" />
+    <Compile Include="Controllers\PuntoVentaAPIController.cs" />
     <Compile Include="Controllers\PuntoVentaController.cs" />
     <Compile Include="Controllers\SolicitudPedidoAPIController.cs" />
     <Compile Include="Controllers\SolicitudPedidoController.cs" />
@@ -330,6 +331,7 @@
       <DependentUpon>mobLibraryModel.edmx</DependentUpon>
       <LastGenOutput>mobLibraryModel.cs</LastGenOutput>
     </Content>
+    <None Include="App_Start\PublishProfiles\mobLibrary.pubxml" />
     <None Include="Properties\PublishProfiles\mobLibrary.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />

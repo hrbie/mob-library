@@ -51,6 +51,7 @@ namespace mobLibrary.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(PUNTO_VENTA punto_venta)
         {
+            
             if (ModelState.IsValid)
             {
                 db.PUNTO_VENTA.Add(punto_venta);

@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 using mobLibrary.Models;
+using System.Globalization;
 
 namespace mobLibrary.Controllers
 {
@@ -142,6 +143,48 @@ namespace mobLibrary.Controllers
             return libro;
         }
 
+        public IEnumerable<LIBRO> GetLIBROByLibreriaAndKeyword(int id_libreria,string nombre)
+        {
+            //seleccionar los libros tq esté asociado en el catálogo de la librería
+            IEnumerable<CATALOGO_LIBRERIA> catalogo = db.CATALOGO_LIBRERIA.Where(c => c.ID_LIBRERIA == id_libreria);
+
+            List<long> ISBNs = new List<long>();
+            foreach (CATALOGO_LIBRERIA c in catalogo)
+            {
+                ISBNs.Add(c.ISBN);
+            }
+
+            IEnumerable<LIBRO> libro = db.LIBRO.Select(x => new 
+            { 
+                ISBN = x.ISBN, 
+                NOMBRE = x.NOMBRE, 
+                AUTOR = x.AUTOR,
+                EDITORIAL = x.EDITORIAL,
+                PRECIO = x.PRECIO,
+                ANIO = x.ANIO,
+                CALIFICACION = x.CALIFICACION
+            }).ToList().Select(t => new LIBRO 
+            {
+                ISBN = t.ISBN,
+                NOMBRE = t.NOMBRE,
+                AUTOR = t.AUTOR,
+                EDITORIAL = t.EDITORIAL,
+                PRECIO = t.PRECIO,
+                ANIO = t.ANIO,
+                CALIFICACION = t.CALIFICACION
+            }).Where(l => (ISBNs.Contains(l.ISBN)) && 
+                ((l.NOMBRE.Contains(nombre.ToLower())) ||
+                (l.NOMBRE.Contains(nombre.ToUpper())) ||
+                (l.NOMBRE.Contains(CultureInfo.InvariantCulture.TextInfo.ToTitleCase(nombre.ToLower())))));
+
+            //System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.ToTitleCase(nombre)
+            if (libro == null)
+            {
+                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
+            }
+
+            return libro;
+        }
 
 
         // PUT api/LibroControllerAPI/5
