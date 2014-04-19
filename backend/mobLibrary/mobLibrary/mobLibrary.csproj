@@ -203,6 +203,7 @@
     <Compile Include="Controllers\PuntoVentaController.cs" />
     <Compile Include="Controllers\SolicitudPedidoAPIController.cs" />
     <Compile Include="Controllers\SolicitudPedidoController.cs" />
+    <Compile Include="Controllers\SolicitudTrasladoAPIController.cs" />
     <Compile Include="Controllers\SolicitudTrasladoController.cs" />
     <Compile Include="Controllers\UsuarioAPIController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
