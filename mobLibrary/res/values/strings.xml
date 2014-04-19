@@ -17,9 +17,9 @@
     <string name="tipoBuscar">Tipo de Busqueda</string>
     <string name="buscar">Buscar:</string>
     <string name="space"/>
-    <string name="nombre">Nombre</string>
-    <string name="autor">Autor</string>
-    <string name="ano">Año</string>
+    <string name="nombre">Nombre:</string>
+    <string name="autor">Autor:</string>
+    <string name="ano">Año:</string>
     <string name="resultado">Resultado de la Busqueda</string>
     
     <string name="APP_ID">806692742691470</string>
@@ -27,10 +27,30 @@
     <string name="row_nombre_libro">Libro: </string>
     <string name="row_autor_libro">Autor: </string>
     <string name="row_ano_libro">Año: </string>
-    <string name="nombre_libro">Nombre del Libro</string>
-    <string name="editorial">Editorial</string>
-    <string name="precio">Precio</string>
+    <string name="nombre_libro">Nombre del Libro:</string>
+    <string name="editorial">Editorial:</string>
+    <string name="precio">Precio:</string>
     <string name="cantidad_ejemplares">Cantidad de Ejemplares</string>
+    <string name="calificacion">Calificacion General</string>
+    <string name="comentario">Comentarios</string>
+    <string name="informacion">Informacion del Libro</string>
+    <string name="isbn">ISBN:</string>
+    <string name="opciones">+ Opciones</string>
+    <string name="agregar">Agregar a  Proximos a Leer</string>
+    <string name="pedidos">Pedidos</string>
+    <string name="traslados">Traslados</string>
+    <string name="calificar">Calificar Libro</string>
+    <string name="comentarios">Comentarios</string>
+    <string name="titulo">Titulo:</string>
+    <string name="coment">Comentario:</string>
+    <string name="publicar">Publicar</string>
+    <string name="ver_comen">Ver Comentarios</string>
+    <string name="promediar">Calificar:</string>
+    <string name="promedio_general">Calificacion General</string>
+    <string name="promediar2">Publicar </string>
+    <string name="row_nombre_usuario">Usuario:</string>
+    <string name="row_comentario">Comentario</string>
+    <string name="row_calificacion">Calificacion:</string>
     
 
 </resources>

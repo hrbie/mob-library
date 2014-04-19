@@ -35,6 +35,9 @@
         
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/APP_ID"/>
         <activity android:name="com.mobLibrary.vista.ActivityInformacionLibro"></activity>
+        <activity android:name="com.mobLibrary.vista.ActivityOpcionesLibro"></activity>
+        <activity android:name="com.mobLibrary.vista.ActivityComentarios"></activity>
+        <activity android:name="com.mobLibrary.vista.ActivityVerComentarios"></activity>
     </application>
 
 </manifest>
