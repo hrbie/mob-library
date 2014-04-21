@@ -38,6 +38,9 @@
         <activity android:name="com.mobLibrary.vista.ActivityOpcionesLibro"></activity>
         <activity android:name="com.mobLibrary.vista.ActivityComentarios"></activity>
         <activity android:name="com.mobLibrary.vista.ActivityVerComentarios"></activity>
+        <activity android:name="com.mobLibrary.vista.ActivityPedido"></activity>
+        <activity android:name="com.mobLibrary.vista.ActivityTraslado"></activity>
+        <activity android:name="com.mobLibrary.vista.ActivityAgregarProximo"></activity>
     </application>
 
 </manifest>

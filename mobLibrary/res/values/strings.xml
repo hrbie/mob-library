@@ -51,6 +51,17 @@
     <string name="row_nombre_usuario">Usuario:</string>
     <string name="row_comentario">Comentario</string>
     <string name="row_calificacion">Calificacion:</string>
+    <string name="punto_de_venta">Puntos de Venta</string>
+    <string name="cantidad_pedido">Cantidad de Pedidos</string>
+    <string name="realizar_pedido">Realizar Pedidos</string>
+    <string name="punto_de_venta_origen">Punto de Venta Origen</string>
+    <string name="punto_de_venta_destino">Punto de Venta Destino</string>
+    <string name="traslado">Traslado</string>
+    <string name="realizar_traslado">Realizar Traslado</string>
+    <string name="agregar_proximo_leer">Agreagar a Proximos a Leer</string>
+    <string name="desea">Desea agregar el libro a La Lista de Proximos a Leer</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
     
 
 </resources>
