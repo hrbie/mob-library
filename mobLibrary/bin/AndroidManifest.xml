@@ -41,6 +41,7 @@
         <activity android:name="com.mobLibrary.vista.ActivityPedido"></activity>
         <activity android:name="com.mobLibrary.vista.ActivityTraslado"></activity>
         <activity android:name="com.mobLibrary.vista.ActivityAgregarProximo"></activity>
+        <activity android:name="com.mobLibrary.vista.ActivityEditar"></activity>
     </application>
 
 </manifest>

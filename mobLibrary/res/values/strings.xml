@@ -62,6 +62,13 @@
     <string name="desea">Desea agregar el libro a La Lista de Proximos a Leer</string>
     <string name="si">Si</string>
     <string name="no">No</string>
+    <string name="URLPostUsuario">http://moblibrary.azurewebsites.net/api/UsuarioAPI/PostUSUARIO</string>
+    <string name="editar_perfil">Editar Perfil</string>
+    <string name="apellido1">Apellido 1:</string>
+    <string name="direccion">Direccion: </string>
+    <string name="editar_email">Email:</string>
+    <string name="guardar">Guardar Cambios</string>
+    <string name="apellido2">Apellido 2:</string>
     
 
 </resources>
