@@ -1,4 +1,4 @@
-﻿@model mobLibrary.Models.SOLICITUD_TRASLADO
+﻿@model SOLICITUD_TRASLADO
 
 @{
     ViewBag.Title = "Details";
@@ -17,10 +17,10 @@
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.ID_USUARIO)
+         @Html.DisplayNameFor(model => model.USUARIO1.NOMBRE)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.ID_USUARIO)
+        @Html.DisplayFor(model => model.USUARIO1.NOMBRE)
     </div>
 
     <div class="display-label">
@@ -38,10 +38,10 @@
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.USUARIO.NOMBRE)
+         @Html.DisplayNameFor(model => model.PUNTO_VENTA1.NOMBRE)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.USUARIO.NOMBRE)
+        @Html.DisplayFor(model => model.PUNTO_VENTA1.NOMBRE)
     </div>
 
     <div class="display-label">

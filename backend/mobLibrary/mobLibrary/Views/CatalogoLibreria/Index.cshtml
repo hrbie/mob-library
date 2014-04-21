@@ -1,4 +1,4 @@
-﻿@model IEnumerable<mobLibrary.Models.CATALOGO_LIBRERIA>
+﻿@model IEnumerable<CATALOGO_LIBRERIA>
 
 @{
     ViewBag.Title = "Index";
@@ -29,7 +29,7 @@
             @Html.DisplayFor(modelItem => item.LIBRO.NOMBRE)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            <!--Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |-->
             @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
             @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>

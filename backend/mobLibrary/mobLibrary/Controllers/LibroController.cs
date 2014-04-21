@@ -114,11 +114,46 @@ namespace mobLibrary.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult IndexCadenaCatalogoLibro(int cadena) {
+            //mostrar los libros del catálogo
+            ViewBag.cadena = cadena;
+
+            LibroAPIController api = new LibroAPIController();
+            IEnumerable<LIBRO> libros = api.GetLIBROByLibreria(cadena);
+            return View(libros);
+        }
+
         public ActionResult IndexCadenaAgregarLibro(int cadena) {
             //agregar acá el filtro para no agregar libros que  ya están.
             ViewBag.cadena = cadena;
-            return View(db.LIBRO.ToList());
+
+            IEnumerable<CATALOGO_LIBRERIA> catalogo = db.CATALOGO_LIBRERIA.Where(c => c.ID_LIBRERIA == cadena);
+
+            List<long> ISBNs = new List<long>();
+            foreach (CATALOGO_LIBRERIA c in catalogo)
+            {
+                ISBNs.Add(c.ISBN);
+            }
+            //solo los que no estén en el catálogo se muestran
+            IEnumerable<LIBRO> libro = db.LIBRO.Where(l => ISBNs.Contains(l.ISBN) == false);
+
+            return View(libro);
         }
+
+        
+
+        public ActionResult verGeneros(int id)
+        {
+            ViewBag.libro = id;
+            return RedirectToAction("IndexGenerosLibro", "Genero", new { libro = id });
+        }
+
+        public ActionResult asignarGenero(int id)
+        {
+            ViewBag.libro = id;
+            return RedirectToAction("IndexAgregarGeneroALibro", "Genero", new { libro = id });
+        }
+
 
         public ActionResult AgregarLibroACadena(int cadena, int libro)
         {
@@ -134,7 +169,7 @@ namespace mobLibrary.Controllers
             }
 
             //Cambiarlo a mostrar libros de la cadena
-            return RedirectToAction("Index");
+            return RedirectToAction("IndexCadenaCatalogoLibro", cadena);
         }
 
         protected override void Dispose(bool disposing)

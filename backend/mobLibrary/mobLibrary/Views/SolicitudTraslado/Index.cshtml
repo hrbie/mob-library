@@ -1,4 +1,4 @@
-﻿@model IEnumerable<mobLibrary.Models.SOLICITUD_TRASLADO>
+﻿@model IEnumerable<SOLICITUD_TRASLADO>
 
 @{
     ViewBag.Title = "Index";
@@ -15,7 +15,7 @@
             @Html.DisplayNameFor(model => model.ID_TRASLADO)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ID_USUARIO)
+            @Html.DisplayNameFor(model => model.USUARIO1.NOMBRE)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.INVENTARIO_PDV.ID_LIBRERIA)
@@ -24,7 +24,7 @@
             @Html.DisplayNameFor(model => model.PUNTO_VENTA.NOMBRE)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.USUARIO.NOMBRE)
+            @Html.DisplayNameFor(model => model.PUNTO_VENTA1.NOMBRE)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ISBN)
@@ -47,7 +47,7 @@
             @Html.DisplayFor(modelItem => item.ID_TRASLADO)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ID_USUARIO)
+            @Html.DisplayFor(modelItem => item.USUARIO1.NOMBRE)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.INVENTARIO_PDV.ID_LIBRERIA)
@@ -56,7 +56,7 @@
             @Html.DisplayFor(modelItem => item.PUNTO_VENTA.NOMBRE)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.USUARIO.NOMBRE)
+            @Html.DisplayFor(modelItem => item.PUNTO_VENTA1.NOMBRE)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ISBN)
@@ -71,9 +71,8 @@
             @Html.DisplayFor(modelItem => item.ESTADO)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new {  id=item.ID_TRASLADO}) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_TRASLADO })
         </td>
     </tr>
 }

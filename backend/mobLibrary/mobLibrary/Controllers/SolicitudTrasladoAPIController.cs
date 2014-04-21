@@ -139,9 +139,9 @@ namespace mobLibrary.Controllers
             solicitud_traslado.ID_PDV_ORIGEN = id_pdv_origen;
             solicitud_traslado.ID_PDV_DESTINO = id_pdv_destino;
             solicitud_traslado.ISBN = isbn;
-            int anio = Int32.Parse(fecha.Split('/').ElementAt(2));
-            int mes = Int32.Parse(fecha.Split('/').ElementAt(1));
-            int dia = Int32.Parse(fecha.Split('/').ElementAt(0));
+            int anio = Int32.Parse(fecha.Split('-').ElementAt(2));
+            int mes = Int32.Parse(fecha.Split('-').ElementAt(1));
+            int dia = Int32.Parse(fecha.Split('-').ElementAt(0));
 
             solicitud_traslado.FECHA = new DateTime(anio, mes, dia);
             solicitud_traslado.CANTIDAD = cantidad;
@@ -180,17 +180,18 @@ namespace mobLibrary.Controllers
         }
 
         // POST api/SolicitudTrasladoAPI
-        public HttpResponseMessage PostSOLICITUD_TRASLADO( int id_usuario, int id_pdv_origen, int id_pdv_destino,int isbn, string fecha, int cantidad, string estado)
+        public HttpResponseMessage PostSOLICITUD_TRASLADO( int id_usuario, int id_libreria, int id_pdv_origen, int id_pdv_destino,int isbn, string fecha, int cantidad, string estado)
         {
             SOLICITUD_TRASLADO solicitud_traslado = new SOLICITUD_TRASLADO();
             solicitud_traslado.ID_TRASLADO = 0;
+            solicitud_traslado.ID_LIBRERIA = id_libreria;
             solicitud_traslado.ID_USUARIO = id_usuario;
             solicitud_traslado.ID_PDV_ORIGEN = id_pdv_origen;
             solicitud_traslado.ID_PDV_DESTINO = id_pdv_destino;
             solicitud_traslado.ISBN = isbn;
-            int anio = Int32.Parse(fecha.Split('/').ElementAt(2));
-            int mes = Int32.Parse(fecha.Split('/').ElementAt(1));
-            int dia = Int32.Parse(fecha.Split('/').ElementAt(0));
+            int anio = Int32.Parse(fecha.Split('-').ElementAt(2));
+            int mes = Int32.Parse(fecha.Split('-').ElementAt(1));
+            int dia = Int32.Parse(fecha.Split('-').ElementAt(0));
 
             solicitud_traslado.FECHA = new DateTime(anio, mes, dia);
             solicitud_traslado.CANTIDAD = cantidad;

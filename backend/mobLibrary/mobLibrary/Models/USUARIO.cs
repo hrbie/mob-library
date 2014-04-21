@@ -7,33 +7,32 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace mobLibrary.Models
+using System;
+using System.Collections.Generic;
+
+public partial class USUARIO
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class USUARIO
+    public USUARIO()
     {
-        public USUARIO()
-        {
-            this.LISTA_LIBROS = new HashSet<LISTA_LIBROS>();
-            this.SOLICITUD_PEDIDO = new HashSet<SOLICITUD_PEDIDO>();
-            this.SOLICITUD_TRASLADO = new HashSet<SOLICITUD_TRASLADO>();
-            this.GENERO = new HashSet<GENERO>();
-        }
-    
-        public int ID_USUARIO { get; set; }
-        public string NOMBRE { get; set; }
-        public string APELLIDO1 { get; set; }
-        public string APELLIDO2 { get; set; }
-        public Nullable<System.DateTime> FECHA_NACIMIENTO { get; set; }
-        public string DIRECCION { get; set; }
-        public string EMAIL { get; set; }
-        public string USERNAME { get; set; }
-    
-        public virtual ICollection<LISTA_LIBROS> LISTA_LIBROS { get; set; }
-        public virtual ICollection<SOLICITUD_PEDIDO> SOLICITUD_PEDIDO { get; set; }
-        public virtual ICollection<SOLICITUD_TRASLADO> SOLICITUD_TRASLADO { get; set; }
-        public virtual ICollection<GENERO> GENERO { get; set; }
+        this.LISTA_LIBROS = new HashSet<LISTA_LIBROS>();
+        this.SOLICITUD_PEDIDO = new HashSet<SOLICITUD_PEDIDO>();
+        this.SOLICITUD_TRASLADO = new HashSet<SOLICITUD_TRASLADO>();
+        this.GENERO = new HashSet<GENERO>();
+        this.SOLICITUD_TRASLADO1 = new HashSet<SOLICITUD_TRASLADO>();
     }
+
+    public int ID_USUARIO { get; set; }
+    public string NOMBRE { get; set; }
+    public string APELLIDO1 { get; set; }
+    public string APELLIDO2 { get; set; }
+    public Nullable<System.DateTime> FECHA_NACIMIENTO { get; set; }
+    public string DIRECCION { get; set; }
+    public string EMAIL { get; set; }
+    public string USERNAME { get; set; }
+
+    public virtual ICollection<LISTA_LIBROS> LISTA_LIBROS { get; set; }
+    public virtual ICollection<SOLICITUD_PEDIDO> SOLICITUD_PEDIDO { get; set; }
+    public virtual ICollection<SOLICITUD_TRASLADO> SOLICITUD_TRASLADO { get; set; }
+    public virtual ICollection<GENERO> GENERO { get; set; }
+    public virtual ICollection<SOLICITUD_TRASLADO> SOLICITUD_TRASLADO1 { get; set; }
 }

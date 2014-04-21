@@ -7,24 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace mobLibrary.Models
+using System;
+using System.Collections.Generic;
+
+public partial class CADENA_LIBRERIAS
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class CADENA_LIBRERIAS
+    public CADENA_LIBRERIAS()
     {
-        public CADENA_LIBRERIAS()
-        {
-            this.CATALOGO_LIBRERIA = new HashSet<CATALOGO_LIBRERIA>();
-            this.PUNTO_VENTA = new HashSet<PUNTO_VENTA>();
-        }
-    
-        public int ID_LIBRERIA { get; set; }
-        public string NOMBRE { get; set; }
-        public string DESCRIPCION { get; set; }
-    
-        public virtual ICollection<CATALOGO_LIBRERIA> CATALOGO_LIBRERIA { get; set; }
-        public virtual ICollection<PUNTO_VENTA> PUNTO_VENTA { get; set; }
+        this.CATALOGO_LIBRERIA = new HashSet<CATALOGO_LIBRERIA>();
+        this.PUNTO_VENTA = new HashSet<PUNTO_VENTA>();
     }
+
+    public int ID_LIBRERIA { get; set; }
+    public string NOMBRE { get; set; }
+    public string DESCRIPCION { get; set; }
+
+    public virtual ICollection<CATALOGO_LIBRERIA> CATALOGO_LIBRERIA { get; set; }
+    public virtual ICollection<PUNTO_VENTA> PUNTO_VENTA { get; set; }
 }

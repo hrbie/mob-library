@@ -7,19 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace mobLibrary.Models
+using System;
+using System.Collections.Generic;
+
+public partial class LISTA_LIBROS
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class LISTA_LIBROS
-    {
-        public int ID_USUARIO { get; set; }
-        public long ISBN { get; set; }
-        public Nullable<int> CALIFICACION { get; set; }
-        public string OPINION { get; set; }
-    
-        public virtual LIBRO LIBRO { get; set; }
-        public virtual USUARIO USUARIO { get; set; }
-    }
+    public int ID_USUARIO { get; set; }
+    public long ISBN { get; set; }
+    public Nullable<int> CALIFICACION { get; set; }
+    public string OPINION { get; set; }
+    public string ESTADO { get; set; }
+
+    public virtual LIBRO LIBRO { get; set; }
+    public virtual USUARIO USUARIO { get; set; }
 }

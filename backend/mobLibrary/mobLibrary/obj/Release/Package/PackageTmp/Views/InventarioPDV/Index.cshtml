@@ -1,4 +1,4 @@
-﻿@model IEnumerable<mobLibrary.Models.INVENTARIO_PDV>
+﻿@model IEnumerable<INVENTARIO_PDV>
 
 @{
     ViewBag.Title = "Index";
@@ -35,15 +35,15 @@
             @Html.DisplayFor(modelItem => item.PUNTO_VENTA.NOMBRE)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ISBN)
+            @Html.DisplayFor(modelItem => item.CATALOGO_LIBRERIA.LIBRO.NOMBRE)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CANTIDAD_DISPONIBLE)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new {  id=item.ID_LIBRERIA, id2 = item.ID_PDV, id3 = item.ISBN }) |
+            <!--Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })-->
         </td>
     </tr>
 }

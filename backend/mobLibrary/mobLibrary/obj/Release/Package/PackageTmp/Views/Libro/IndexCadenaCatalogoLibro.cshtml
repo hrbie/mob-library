@@ -1,0 +1,69 @@
+﻿@model IEnumerable<LIBRO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ISBN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AUTOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EDITORIAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRECIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ANIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CALIFICACION)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ISBN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AUTOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EDITORIAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRECIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ANIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CALIFICACION)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.ISBN }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ISBN }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ISBN })
+        </td>
+    </tr>
+}
+
+</table>

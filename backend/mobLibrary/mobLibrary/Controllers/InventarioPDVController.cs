@@ -40,8 +40,12 @@ namespace mobLibrary.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.ID_LIBRERIA = new SelectList(db.CATALOGO_LIBRERIA, "ID_LIBRERIA", "ID_LIBRERIA");
+            ViewBag.ID_LIBRERIA = new SelectList(db.CADENA_LIBRERIAS, "ID_LIBRERIA", "NOMBRE");
             ViewBag.ID_PDV = new SelectList(db.PUNTO_VENTA, "ID_PDV", "NOMBRE");
+            ViewBag.ISBN = new SelectList(db.LIBRO, "ISBN", "NOMBRE");
+
+
+
             return View();
         }
 
@@ -67,9 +71,9 @@ namespace mobLibrary.Controllers
         //
         // GET: /InventarioPDV/Edit/5
 
-        public ActionResult Edit(int id = 0)
+        public ActionResult Edit(int id = 0, int id2 =0 , int id3 =0)
         {
-            INVENTARIO_PDV inventario_pdv = db.INVENTARIO_PDV.Find(id);
+            INVENTARIO_PDV inventario_pdv = db.INVENTARIO_PDV.Find(id,id2,id3);
             if (inventario_pdv == null)
             {
                 return HttpNotFound();

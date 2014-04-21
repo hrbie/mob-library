@@ -7,23 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace mobLibrary.Models
+using System;
+using System.Collections.Generic;
+
+public partial class CATALOGO_LIBRERIA
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class CATALOGO_LIBRERIA
+    public CATALOGO_LIBRERIA()
     {
-        public CATALOGO_LIBRERIA()
-        {
-            this.INVENTARIO_PDV = new HashSet<INVENTARIO_PDV>();
-        }
-    
-        public int ID_LIBRERIA { get; set; }
-        public long ISBN { get; set; }
-    
-        public virtual CADENA_LIBRERIAS CADENA_LIBRERIAS { get; set; }
-        public virtual ICollection<INVENTARIO_PDV> INVENTARIO_PDV { get; set; }
-        public virtual LIBRO LIBRO { get; set; }
+        this.INVENTARIO_PDV = new HashSet<INVENTARIO_PDV>();
     }
+
+    public int ID_LIBRERIA { get; set; }
+    public long ISBN { get; set; }
+
+    public virtual CADENA_LIBRERIAS CADENA_LIBRERIAS { get; set; }
+    public virtual ICollection<INVENTARIO_PDV> INVENTARIO_PDV { get; set; }
+    public virtual LIBRO LIBRO { get; set; }
 }

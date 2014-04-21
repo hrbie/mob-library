@@ -1,4 +1,4 @@
-﻿@model mobLibrary.Models.SOLICITUD_TRASLADO
+﻿@model SOLICITUD_TRASLADO
 
 @{
     ViewBag.Title = "Edit";
@@ -22,10 +22,10 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.ID_USUARIO)
+            @Html.LabelFor(model => model.ID_USUARIO, "USUARIO1")
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.ID_USUARIO)
+            @Html.DropDownList("ID_USUARIO", String.Empty)
             @Html.ValidationMessageFor(model => model.ID_USUARIO)
         </div>
 
@@ -46,7 +46,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.ID_PDV_DESTINO, "USUARIO")
+            @Html.LabelFor(model => model.ID_PDV_DESTINO, "PUNTO_VENTA1")
         </div>
         <div class="editor-field">
             @Html.DropDownList("ID_PDV_DESTINO", String.Empty)

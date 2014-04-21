@@ -159,9 +159,9 @@ namespace mobLibrary.Controllers
             usuario.APELLIDO1 = apellido1;
             usuario.APELLIDO2 = apellido2;
 
-            int anio = Int32.Parse(fecha.Split('/').ElementAt(2));
-            int mes = Int32.Parse(fecha.Split('/').ElementAt(1));
-            int dia = Int32.Parse(fecha.Split('/').ElementAt(0));
+            int anio = Int32.Parse(fecha.Split('-').ElementAt(2));
+            int mes = Int32.Parse(fecha.Split('-').ElementAt(1));
+            int dia = Int32.Parse(fecha.Split('-').ElementAt(0));
 
             usuario.FECHA_NACIMIENTO = new DateTime(anio, mes, dia);
             usuario.DIRECCION = direccion;

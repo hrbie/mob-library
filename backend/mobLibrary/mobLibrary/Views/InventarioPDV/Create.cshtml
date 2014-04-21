@@ -1,4 +1,4 @@
-﻿@model mobLibrary.Models.INVENTARIO_PDV
+﻿@model INVENTARIO_PDV
 
 @{
     ViewBag.Title = "Create";
@@ -14,7 +14,7 @@
         <legend>INVENTARIO_PDV</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.ID_LIBRERIA, "CATALOGO_LIBRERIA")
+            @Html.LabelFor(model => model.ID_LIBRERIA,"LIBRERIA")
         </div>
         <div class="editor-field">
             @Html.DropDownList("ID_LIBRERIA", String.Empty)
@@ -33,7 +33,7 @@
             @Html.LabelFor(model => model.ISBN)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.ISBN)
+            @Html.DropDownList("ISBN",  String.Empty)
             @Html.ValidationMessageFor(model => model.ISBN)
         </div>
 

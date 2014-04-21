@@ -67,9 +67,9 @@ namespace mobLibrary.Controllers
         //
         // GET: /ListaLibros/Edit/5
 
-        public ActionResult Edit(int id = 0)
+        public ActionResult Edit(int id = 0,int id2 = 0)
         {
-            LISTA_LIBROS lista_libros = db.LISTA_LIBROS.Find(id);
+            LISTA_LIBROS lista_libros = db.LISTA_LIBROS.Find(id,id2);
             if (lista_libros == null)
             {
                 return HttpNotFound();
@@ -100,9 +100,9 @@ namespace mobLibrary.Controllers
         //
         // GET: /ListaLibros/Delete/5
 
-        public ActionResult Delete(int id = 0)
+        public ActionResult Delete(int id = 0, int id2 = 0)
         {
-            LISTA_LIBROS lista_libros = db.LISTA_LIBROS.Find(id);
+            LISTA_LIBROS lista_libros = db.LISTA_LIBROS.Find(id,id2);
             if (lista_libros == null)
             {
                 return HttpNotFound();

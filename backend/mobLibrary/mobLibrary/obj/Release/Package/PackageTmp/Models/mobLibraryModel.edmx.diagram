@@ -29,6 +29,8 @@
         <AssociationConnector Association="mobLibraryModel.SOLICITUD_TRASLADO_USUARIO_FK" ManuallyRouted="false" />
         <AssociationConnector Association="mobLibraryModel.GENERO_FAVORITO" ManuallyRouted="false" />
         <AssociationConnector Association="mobLibraryModel.GENERO_LIBRO" ManuallyRouted="false" />
+        <AssociationConnector Association="mobLibraryModel.DESTINO_FK1" />
+        <AssociationConnector Association="mobLibraryModel.SOLICITUD_TRASLADO_USUARIO_FK1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

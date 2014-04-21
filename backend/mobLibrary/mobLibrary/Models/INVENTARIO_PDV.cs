@@ -7,27 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace mobLibrary.Models
+using System;
+using System.Collections.Generic;
+
+public partial class INVENTARIO_PDV
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class INVENTARIO_PDV
+    public INVENTARIO_PDV()
     {
-        public INVENTARIO_PDV()
-        {
-            this.SOLICITUD_TRASLADO = new HashSet<SOLICITUD_TRASLADO>();
-            this.SOLICITUD_PEDIDO = new HashSet<SOLICITUD_PEDIDO>();
-        }
-    
-        public int ID_LIBRERIA { get; set; }
-        public int ID_PDV { get; set; }
-        public long ISBN { get; set; }
-        public Nullable<int> CANTIDAD_DISPONIBLE { get; set; }
-    
-        public virtual CATALOGO_LIBRERIA CATALOGO_LIBRERIA { get; set; }
-        public virtual ICollection<SOLICITUD_TRASLADO> SOLICITUD_TRASLADO { get; set; }
-        public virtual PUNTO_VENTA PUNTO_VENTA { get; set; }
-        public virtual ICollection<SOLICITUD_PEDIDO> SOLICITUD_PEDIDO { get; set; }
+        this.SOLICITUD_TRASLADO = new HashSet<SOLICITUD_TRASLADO>();
+        this.SOLICITUD_PEDIDO = new HashSet<SOLICITUD_PEDIDO>();
     }
+
+    public int ID_LIBRERIA { get; set; }
+    public int ID_PDV { get; set; }
+    public long ISBN { get; set; }
+    public Nullable<int> CANTIDAD_DISPONIBLE { get; set; }
+
+    public virtual CATALOGO_LIBRERIA CATALOGO_LIBRERIA { get; set; }
+    public virtual ICollection<SOLICITUD_TRASLADO> SOLICITUD_TRASLADO { get; set; }
+    public virtual PUNTO_VENTA PUNTO_VENTA { get; set; }
+    public virtual ICollection<SOLICITUD_PEDIDO> SOLICITUD_PEDIDO { get; set; }
 }

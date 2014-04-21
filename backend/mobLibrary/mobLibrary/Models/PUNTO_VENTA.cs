@@ -7,30 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace mobLibrary.Models
-{
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class PUNTO_VENTA
-    {
-        public PUNTO_VENTA()
-        {
-            this.INVENTARIO_PDV = new HashSet<INVENTARIO_PDV>();
-            this.SOLICITUD_TRASLADO = new HashSet<SOLICITUD_TRASLADO>();
-        }
-    
-        public int ID_PDV { get; set; }
-        public int ID_LIBRERIA { get; set; }
-        public string NOMBRE { get; set; }
-        public string DIRECCIÓN { get; set; }
-        public string TELEFONO { get; set; }
+using System;
+using System.Collections.Generic;
 
-        public Nullable<double> LATITUD { get; set; }
-        public Nullable<double> LONGITUD { get; set; }
-    
-        public virtual CADENA_LIBRERIAS CADENA_LIBRERIAS { get; set; }
-        public virtual ICollection<INVENTARIO_PDV> INVENTARIO_PDV { get; set; }
-        public virtual ICollection<SOLICITUD_TRASLADO> SOLICITUD_TRASLADO { get; set; }
+public partial class PUNTO_VENTA
+{
+    public PUNTO_VENTA()
+    {
+        this.INVENTARIO_PDV = new HashSet<INVENTARIO_PDV>();
+        this.SOLICITUD_TRASLADO = new HashSet<SOLICITUD_TRASLADO>();
+        this.SOLICITUD_TRASLADO1 = new HashSet<SOLICITUD_TRASLADO>();
     }
+
+    public int ID_PDV { get; set; }
+    public int ID_LIBRERIA { get; set; }
+    public string NOMBRE { get; set; }
+    public string DIRECCIÓN { get; set; }
+    public string TELEFONO { get; set; }
+    public Nullable<double> LATITUD { get; set; }
+    public Nullable<double> LONGITUD { get; set; }
+
+    public virtual CADENA_LIBRERIAS CADENA_LIBRERIAS { get; set; }
+    public virtual ICollection<INVENTARIO_PDV> INVENTARIO_PDV { get; set; }
+    public virtual ICollection<SOLICITUD_TRASLADO> SOLICITUD_TRASLADO { get; set; }
+    public virtual ICollection<SOLICITUD_TRASLADO> SOLICITUD_TRASLADO1 { get; set; }
 }

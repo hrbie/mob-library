@@ -52,6 +52,7 @@
     <EntitySetMapping Name="LISTA_LIBROS">
       <EntityTypeMapping TypeName="mobLibraryModel.LISTA_LIBROS">
         <MappingFragment StoreEntitySet="LISTA_LIBROS">
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
           <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
           <ScalarProperty Name="ISBN" ColumnName="ISBN" />
           <ScalarProperty Name="CALIFICACION" ColumnName="CALIFICACION" />

@@ -52,16 +52,23 @@ namespace mobLibrary.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(CATALOGO_LIBRERIA catalogo_libreria)
         {
-            if (ModelState.IsValid)
+            if (db.CATALOGO_LIBRERIA.Find(catalogo_libreria.ID_LIBRERIA, catalogo_libreria.ISBN) == null)
             {
-                db.CATALOGO_LIBRERIA.Add(catalogo_libreria);
-                db.SaveChanges();
+
+                if (ModelState.IsValid)
+                {
+                    db.CATALOGO_LIBRERIA.Add(catalogo_libreria);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+
+                ViewBag.ID_LIBRERIA = new SelectList(db.CADENA_LIBRERIAS, "ID_LIBRERIA", "NOMBRE", catalogo_libreria.ID_LIBRERIA);
+                ViewBag.ISBN = new SelectList(db.LIBRO, "ISBN", "NOMBRE", catalogo_libreria.ISBN);
+                return View(catalogo_libreria);
+            }
+            else {
                 return RedirectToAction("Index");
             }
-
-            ViewBag.ID_LIBRERIA = new SelectList(db.CADENA_LIBRERIAS, "ID_LIBRERIA", "NOMBRE", catalogo_libreria.ID_LIBRERIA);
-            ViewBag.ISBN = new SelectList(db.LIBRO, "ISBN", "NOMBRE", catalogo_libreria.ISBN);
-            return View(catalogo_libreria);
         }
 
         //

@@ -133,9 +133,9 @@ namespace mobLibrary.Controllers
             solicitud_pedido.ID_PDV = id_pdv;
             solicitud_pedido.ISBN = isbn;
 
-            int anio = Int32.Parse(fecha.Split('/').ElementAt(2));
-            int mes = Int32.Parse(fecha.Split('/').ElementAt(1));
-            int dia = Int32.Parse(fecha.Split('/').ElementAt(0));
+            int anio = Int32.Parse(fecha.Split('-').ElementAt(2));
+            int mes = Int32.Parse(fecha.Split('-').ElementAt(1));
+            int dia = Int32.Parse(fecha.Split('-').ElementAt(0));
 
             solicitud_pedido.FECHA = new DateTime(anio, mes, dia);
             solicitud_pedido.ESTADO = estado;
@@ -183,9 +183,9 @@ namespace mobLibrary.Controllers
             solicitud_pedido.ID_PDV = id_pdv;
             solicitud_pedido.ISBN = isbn;
 
-            int anio = Int32.Parse(fecha.Split('/').ElementAt(2));
-            int mes = Int32.Parse(fecha.Split('/').ElementAt(1));
-            int dia = Int32.Parse(fecha.Split('/').ElementAt(0));
+            int anio = Int32.Parse(fecha.Split('-').ElementAt(2));
+            int mes = Int32.Parse(fecha.Split('-').ElementAt(1));
+            int dia = Int32.Parse(fecha.Split('-').ElementAt(0));
 
             solicitud_pedido.FECHA = new DateTime(anio, mes, dia);
             solicitud_pedido.ESTADO = estado;

@@ -120,6 +120,11 @@ namespace mobLibrary.Controllers
             return RedirectToAction("IndexCadenaAgregarLibro","Libro",new {cadena = id});
         }
 
+        public ActionResult Catalogue(int id)
+        {
+            return RedirectToAction("IndexCadenaCatalogoLibro", "Libro", new { cadena = id });
+        }
+
         protected override void Dispose(bool disposing)
         {
             db.Dispose();

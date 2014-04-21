@@ -149,6 +149,7 @@
     <Property Name="ISBN" Type="bigint" Nullable="false" />
     <Property Name="CALIFICACION" Type="int" />
     <Property Name="OPINION" Type="text" />
+    <Property Name="ESTADO" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="PUNTO_VENTA">
     <Key>
@@ -210,7 +211,7 @@
         <PropertyRef Name="ID_PDV" />
       </Principal>
       <Dependent Role="SOLICITUD_TRASLADO">
-        <PropertyRef Name="ID_PDV_ORIGEN" />
+        <PropertyRef Name="ID_PDV_DESTINO" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -400,7 +401,7 @@
         <PropertyRef Name="ID_USUARIO" />
       </Principal>
       <Dependent Role="SOLICITUD_TRASLADO">
-        <PropertyRef Name="ID_PDV_DESTINO" />
+        <PropertyRef Name="ID_USUARIO" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

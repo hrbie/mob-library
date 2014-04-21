@@ -288,9 +288,9 @@ namespace mobLibrary.Controllers
                         u.APELLIDO2 = ( (string)response["last_name"] ).Split(' ').ElementAt(1);
                        
                         //string fecha = (string)response["birthday"];
-                        //int mes = Int32.Parse(fecha.Split('/').ElementAt(0));
-                        //int dia = Int32.Parse(fecha.Split('/').ElementAt(1));
-                        //int anio = Int32.Parse(fecha.Split('/').ElementAt(2));
+                        //int mes = Int32.Parse(fecha.Split('-').ElementAt(0));
+                        //int dia = Int32.Parse(fecha.Split('-').ElementAt(1));
+                        //int anio = Int32.Parse(fecha.Split('-').ElementAt(2));
                         //u.FECHA_NACIMIENTO = new DateTime(anio,mes,dia);
                         
                         //u.DIRECCION = response["location"];

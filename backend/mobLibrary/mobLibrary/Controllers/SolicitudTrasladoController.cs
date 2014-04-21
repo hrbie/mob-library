@@ -18,7 +18,7 @@ namespace mobLibrary.Controllers
 
         public ActionResult Index()
         {
-            var solicitud_traslado = db.SOLICITUD_TRASLADO.Include(s => s.INVENTARIO_PDV).Include(s => s.PUNTO_VENTA).Include(s => s.USUARIO);
+            var solicitud_traslado = db.SOLICITUD_TRASLADO.Include(s => s.INVENTARIO_PDV).Include(s => s.PUNTO_VENTA).Include(s => s.PUNTO_VENTA1).Include(s => s.USUARIO1);
             return View(solicitud_traslado.ToList());
         }
 
@@ -42,7 +42,8 @@ namespace mobLibrary.Controllers
         {
             ViewBag.ID_LIBRERIA = new SelectList(db.INVENTARIO_PDV, "ID_LIBRERIA", "ID_LIBRERIA");
             ViewBag.ID_PDV_ORIGEN = new SelectList(db.PUNTO_VENTA, "ID_PDV", "NOMBRE");
-            ViewBag.ID_PDV_DESTINO = new SelectList(db.USUARIO, "ID_USUARIO", "NOMBRE");
+            ViewBag.ID_PDV_DESTINO = new SelectList(db.PUNTO_VENTA, "ID_PDV", "NOMBRE");
+            ViewBag.ID_USUARIO = new SelectList(db.USUARIO, "ID_USUARIO", "NOMBRE");
             return View();
         }
 
@@ -62,7 +63,8 @@ namespace mobLibrary.Controllers
 
             ViewBag.ID_LIBRERIA = new SelectList(db.INVENTARIO_PDV, "ID_LIBRERIA", "ID_LIBRERIA", solicitud_traslado.ID_LIBRERIA);
             ViewBag.ID_PDV_ORIGEN = new SelectList(db.PUNTO_VENTA, "ID_PDV", "NOMBRE", solicitud_traslado.ID_PDV_ORIGEN);
-            ViewBag.ID_PDV_DESTINO = new SelectList(db.USUARIO, "ID_USUARIO", "NOMBRE", solicitud_traslado.ID_PDV_DESTINO);
+            ViewBag.ID_PDV_DESTINO = new SelectList(db.PUNTO_VENTA, "ID_PDV", "NOMBRE", solicitud_traslado.ID_PDV_DESTINO);
+            ViewBag.ID_USUARIO = new SelectList(db.USUARIO, "ID_USUARIO", "NOMBRE", solicitud_traslado.ID_USUARIO);
             return View(solicitud_traslado);
         }
 
@@ -78,7 +80,8 @@ namespace mobLibrary.Controllers
             }
             ViewBag.ID_LIBRERIA = new SelectList(db.INVENTARIO_PDV, "ID_LIBRERIA", "ID_LIBRERIA", solicitud_traslado.ID_LIBRERIA);
             ViewBag.ID_PDV_ORIGEN = new SelectList(db.PUNTO_VENTA, "ID_PDV", "NOMBRE", solicitud_traslado.ID_PDV_ORIGEN);
-            ViewBag.ID_PDV_DESTINO = new SelectList(db.USUARIO, "ID_USUARIO", "NOMBRE", solicitud_traslado.ID_PDV_DESTINO);
+            ViewBag.ID_PDV_DESTINO = new SelectList(db.PUNTO_VENTA, "ID_PDV", "NOMBRE", solicitud_traslado.ID_PDV_DESTINO);
+            ViewBag.ID_USUARIO = new SelectList(db.USUARIO, "ID_USUARIO", "NOMBRE", solicitud_traslado.ID_USUARIO);
             return View(solicitud_traslado);
         }
 
@@ -97,7 +100,8 @@ namespace mobLibrary.Controllers
             }
             ViewBag.ID_LIBRERIA = new SelectList(db.INVENTARIO_PDV, "ID_LIBRERIA", "ID_LIBRERIA", solicitud_traslado.ID_LIBRERIA);
             ViewBag.ID_PDV_ORIGEN = new SelectList(db.PUNTO_VENTA, "ID_PDV", "NOMBRE", solicitud_traslado.ID_PDV_ORIGEN);
-            ViewBag.ID_PDV_DESTINO = new SelectList(db.USUARIO, "ID_USUARIO", "NOMBRE", solicitud_traslado.ID_PDV_DESTINO);
+            ViewBag.ID_PDV_DESTINO = new SelectList(db.PUNTO_VENTA, "ID_PDV", "NOMBRE", solicitud_traslado.ID_PDV_DESTINO);
+            ViewBag.ID_USUARIO = new SelectList(db.USUARIO, "ID_USUARIO", "NOMBRE", solicitud_traslado.ID_USUARIO);
             return View(solicitud_traslado);
         }
 

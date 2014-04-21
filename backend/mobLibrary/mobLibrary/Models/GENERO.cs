@@ -7,23 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace mobLibrary.Models
+using System;
+using System.Collections.Generic;
+
+public partial class GENERO
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class GENERO
+    public GENERO()
     {
-        public GENERO()
-        {
-            this.USUARIO = new HashSet<USUARIO>();
-            this.LIBRO = new HashSet<LIBRO>();
-        }
-    
-        public int ID_GENERO { get; set; }
-        public string GENERO1 { get; set; }
-    
-        public virtual ICollection<USUARIO> USUARIO { get; set; }
-        public virtual ICollection<LIBRO> LIBRO { get; set; }
+        this.USUARIO = new HashSet<USUARIO>();
+        this.LIBRO = new HashSet<LIBRO>();
     }
+
+    public int ID_GENERO { get; set; }
+    public string GENERO1 { get; set; }
+
+    public virtual ICollection<USUARIO> USUARIO { get; set; }
+    public virtual ICollection<LIBRO> LIBRO { get; set; }
 }

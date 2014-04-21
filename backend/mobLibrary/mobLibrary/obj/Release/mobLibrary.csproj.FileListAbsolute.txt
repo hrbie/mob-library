@@ -8,6 +8,7 @@ C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\DotNetOpenAuth.OpenId.dll
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\EntityFramework.dll
+C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\Facebook.dll
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\Microsoft.Data.Edm.dll
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\Microsoft.Data.OData.dll
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\Microsoft.Web.Infrastructure.dll
@@ -29,6 +30,7 @@ C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\WebGrease.dll
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\WebMatrix.Data.dll
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\WebMatrix.WebData.dll
+C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\Facebook.xml
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\EntityFramework.xml
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\Newtonsoft.Json.xml
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\System.Net.Http.Formatting.xml
@@ -82,6 +84,4 @@ C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\obj\Release\mobLibrary.dll
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\obj\Release\mobLibrary.pdb
-C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\Facebook.dll
-C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\bin\Facebook.xml
 C:\Users\Herberth\Documents\GitHub\mob-library\backend\mobLibrary\mobLibrary\obj\Release\mobLibrary.csprojResolveAssemblyReference.cache

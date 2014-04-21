@@ -1,4 +1,4 @@
-﻿@model IEnumerable<mobLibrary.Models.LIBRO>
+﻿@model IEnumerable<LIBRO>
 
 @{
     ViewBag.Title = "Index";
@@ -61,7 +61,9 @@
         <td>
             @Html.ActionLink("Edit", "Edit", new {  id=item.ISBN }) |
             @Html.ActionLink("Details", "Details", new { id=item.ISBN }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ISBN })
+            @Html.ActionLink("Delete", "Delete", new { id=item.ISBN }) |
+            @Html.ActionLink( "Ver Generos", "verGeneros", new { id=item.ISBN }) |
+            @Html.ActionLink("Asignar Genero", "asignarGenero", new { id=item.ISBN }) |
         </td>
     </tr>
 }

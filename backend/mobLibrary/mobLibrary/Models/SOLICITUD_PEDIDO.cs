@@ -7,23 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace mobLibrary.Models
+using System;
+using System.Collections.Generic;
+
+public partial class SOLICITUD_PEDIDO
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class SOLICITUD_PEDIDO
-    {
-        public int ID_PEDIDO { get; set; }
-        public int ID_USUARIO { get; set; }
-        public int ID_LIBRERIA { get; set; }
-        public int ID_PDV { get; set; }
-        public long ISBN { get; set; }
-        public Nullable<System.DateTime> FECHA { get; set; }
-        public string ESTADO { get; set; }
-        public Nullable<int> CANTIDAD { get; set; }
-    
-        public virtual INVENTARIO_PDV INVENTARIO_PDV { get; set; }
-        public virtual USUARIO USUARIO { get; set; }
-    }
+    public int ID_PEDIDO { get; set; }
+    public int ID_USUARIO { get; set; }
+    public int ID_LIBRERIA { get; set; }
+    public int ID_PDV { get; set; }
+    public long ISBN { get; set; }
+    public Nullable<System.DateTime> FECHA { get; set; }
+    public string ESTADO { get; set; }
+    public Nullable<int> CANTIDAD { get; set; }
+
+    public virtual INVENTARIO_PDV INVENTARIO_PDV { get; set; }
+    public virtual USUARIO USUARIO { get; set; }
 }

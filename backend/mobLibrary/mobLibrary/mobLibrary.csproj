@@ -191,6 +191,7 @@
     <Compile Include="Controllers\CadenaLibreriasController.cs" />
     <Compile Include="Controllers\CatalogoLibreriaController.cs" />
     <Compile Include="Controllers\GeneroAPIController.cs" />
+    <Compile Include="Controllers\InventarioPDVAPIController.cs" />
     <Compile Include="Controllers\InventarioPDVController.cs" />
     <Compile Include="Controllers\LibroAPI2Controller.cs" />
     <Compile Include="Controllers\GeneroController.cs" />
@@ -421,11 +422,6 @@
     <Content Include="Views\InventarioPDV\Create.cshtml" />
     <Content Include="Views\InventarioPDV\Edit.cshtml" />
     <Content Include="Views\InventarioPDV\Delete.cshtml" />
-    <Content Include="Views\ListaLibros\Index.cshtml" />
-    <Content Include="Views\ListaLibros\Details.cshtml" />
-    <Content Include="Views\ListaLibros\Create.cshtml" />
-    <Content Include="Views\ListaLibros\Edit.cshtml" />
-    <Content Include="Views\ListaLibros\Delete.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Usuario\Details.cshtml" />
     <Content Include="Views\Usuario\Create.cshtml" />
@@ -436,11 +432,19 @@
     <Content Include="Views\SolicitudPedido\Create.cshtml" />
     <Content Include="Views\SolicitudPedido\Edit.cshtml" />
     <Content Include="Views\SolicitudPedido\Delete.cshtml" />
+    <Content Include="Views\ListaLibros\Index.cshtml" />
+    <Content Include="Views\ListaLibros\Details.cshtml" />
+    <Content Include="Views\ListaLibros\Create.cshtml" />
+    <Content Include="Views\ListaLibros\Edit.cshtml" />
+    <Content Include="Views\ListaLibros\Delete.cshtml" />
     <Content Include="Views\SolicitudTraslado\Index.cshtml" />
     <Content Include="Views\SolicitudTraslado\Details.cshtml" />
     <Content Include="Views\SolicitudTraslado\Create.cshtml" />
     <Content Include="Views\SolicitudTraslado\Edit.cshtml" />
     <Content Include="Views\SolicitudTraslado\Delete.cshtml" />
+    <Content Include="Views\Libro\IndexCadenaCatalogoLibro.cshtml" />
+    <Content Include="Views\Genero\IndexGenerosLibro.cshtml" />
+    <Content Include="Views\Genero\IndexAgregarGeneroALibro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

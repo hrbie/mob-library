@@ -7,30 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace mobLibrary.Models
+using System;
+using System.Collections.Generic;
+
+public partial class LIBRO
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class LIBRO
+    public LIBRO()
     {
-        public LIBRO()
-        {
-            this.CATALOGO_LIBRERIA = new HashSet<CATALOGO_LIBRERIA>();
-            this.LISTA_LIBROS = new HashSet<LISTA_LIBROS>();
-            this.GENERO = new HashSet<GENERO>();
-        }
-    
-        public long ISBN { get; set; }
-        public string NOMBRE { get; set; }
-        public string AUTOR { get; set; }
-        public string EDITORIAL { get; set; }
-        public Nullable<int> PRECIO { get; set; }
-        public Nullable<int> ANIO { get; set; }
-        public Nullable<int> CALIFICACION { get; set; }
-    
-        public virtual ICollection<CATALOGO_LIBRERIA> CATALOGO_LIBRERIA { get; set; }
-        public virtual ICollection<LISTA_LIBROS> LISTA_LIBROS { get; set; }
-        public virtual ICollection<GENERO> GENERO { get; set; }
+        this.CATALOGO_LIBRERIA = new HashSet<CATALOGO_LIBRERIA>();
+        this.LISTA_LIBROS = new HashSet<LISTA_LIBROS>();
+        this.GENERO = new HashSet<GENERO>();
     }
+
+    public long ISBN { get; set; }
+    public string NOMBRE { get; set; }
+    public string AUTOR { get; set; }
+    public string EDITORIAL { get; set; }
+    public Nullable<int> PRECIO { get; set; }
+    public Nullable<int> ANIO { get; set; }
+    public Nullable<int> CALIFICACION { get; set; }
+
+    public virtual ICollection<CATALOGO_LIBRERIA> CATALOGO_LIBRERIA { get; set; }
+    public virtual ICollection<LISTA_LIBROS> LISTA_LIBROS { get; set; }
+    public virtual ICollection<GENERO> GENERO { get; set; }
 }

@@ -21,6 +21,41 @@ namespace mobLibrary.Controllers
             return View(db.GENERO.ToList());
         }
 
+        public ActionResult IndexGenerosLibro(int libro)
+        { 
+            LIBRO l = db.LIBRO.Find(libro);
+            
+            return View(l.GENERO);
+        }
+
+        public ActionResult IndexAgregarGeneroALibro(int libro)
+        {
+            LIBRO l = db.LIBRO.Find(libro);
+            ViewBag.libro = l.ISBN;
+            List<int> idsGen = new List<int>();
+
+            foreach (GENERO i in l.GENERO) {
+                idsGen.Add(i.ID_GENERO);
+            }
+
+            return View(db.GENERO.Where(x => idsGen.Contains(x.ID_GENERO) == false ));
+        }
+
+        public ActionResult AgregarGenero(int libro, int genero)
+        {
+            db.LIBRO.Find(libro).GENERO.Add(db.GENERO.Find(genero));
+            //db.GENERO.Find(genero).LIBRO.Add(db.LIBRO.Find(libro));
+            if (ModelState.IsValid)
+            {
+                db.SaveChanges();
+                return RedirectToAction("IndexGenerosLibro", new { libro = libro });
+                
+            }
+
+            //Cambiarlo a mostrar libros de la cadena
+            return RedirectToAction("IndexGenerosLibro", libro); 
+        }
+
         //
         // GET: /Genero/Details/5
 
