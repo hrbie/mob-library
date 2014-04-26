@@ -14,7 +14,7 @@
     <string name="editar_menu">Editar </string>
     <string name="salir_menu">Salir</string>
     <string name="libreria">Libreria</string>
-    <string name="tipoBuscar">Tipo de Busqueda</string>
+    <string name="buscarPor">Buscar por</string>
     <string name="buscar">Buscar:</string>
     <string name="space"/>
     <string name="nombre">Nombre:</string>
@@ -62,13 +62,15 @@
     <string name="desea">Desea agregar el libro a La Lista de Proximos a Leer</string>
     <string name="si">Si</string>
     <string name="no">No</string>
-    <string name="URLPostUsuario">http://moblibrary.azurewebsites.net/api/UsuarioAPI/PostUSUARIO</string>
-    <string name="editar_perfil">Editar Perfil</string>
+    <string name="urlPostUsuario">http://moblibrary.azurewebsites.net/api/UsuarioAPI/PostUSUARIO</string>
+    <string name="editar_perfil">Perfil</string>
     <string name="apellido1">Apellido 1:</string>
     <string name="direccion">Direccion: </string>
     <string name="editar_email">Email:</string>
     <string name="guardar">Guardar Cambios</string>
     <string name="apellido2">Apellido 2:</string>
+    <string name="url_Libreria">http://moblibrary.azurewebsites.net/api/CadenaLibreriasAPI/GetCADENA_LIBRERIAS</string>
+    <string name="escritoPor">escrito por:</string>
     
 
 </resources>

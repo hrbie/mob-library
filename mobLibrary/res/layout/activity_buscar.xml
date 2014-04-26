@@ -14,9 +14,8 @@
         android:id="@+id/lblComTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginBottom="2dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="5dp"
         android:layout_marginTop="2dp"
         android:text="@string/buscar_menu"
         android:textSize="35dp"
@@ -42,20 +41,18 @@
     	android:layout_marginBottom="10dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp" 
+        android:dropDownWidth="35dp"
         />
     
-    	
-
     <TextView
         android:id="@+id/lblTipoBuscar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tipoBuscar"
-        
         android:layout_marginBottom="2dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="5dp"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:text="@string/buscarPor" />
     
     <Spinner
         android:id="@+id/spnTipoBusqueda"

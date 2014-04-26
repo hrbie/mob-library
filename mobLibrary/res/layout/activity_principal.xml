@@ -40,4 +40,11 @@
         fb:login_text="Entra con Facebook"
         fb:logout_text="Salir" />
 
+    <Button
+        android:id="@+id/btnPase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="llamar_activity_menu_test"
+        android:text="Button" />
+
 </LinearLayout>
