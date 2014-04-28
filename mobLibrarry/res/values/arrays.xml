@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opciones_busqueda">
+        <item>Nombre de libro</item>
+        <item>Nombre de autor</item>
+        <item>Editorial</item>
+        <item>Año</item>
+        
+    </string-array>
+    
+</resources>

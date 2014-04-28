@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/black"
+    android:padding="6dip" >
+    
+    
+        <!-- android:layout_below="@+id/row_nombre_libro" -->
+        
+    
+    
+    <TextView
+        android:id="@+id/row_nombre_libro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="30dp"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium">
+    </TextView>
+ 
+     <TextView
+        android:id="@+id/row_autor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row_nombre_libro"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        >
+    </TextView>
+    
+    <RatingBar
+     android:id="@+id/rtbColumnaResultado_Calificar"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginLeft="10dp"
+     android:layout_marginRight="15dp"
+     
+     android:layout_below="@+id/row_autor"
+     
+     android:numStars="5"
+     android:rating="1.0"
+     android:stepSize="1.0" />
+    
+     <TextView
+        android:id="@+id/row_ano"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row_autor"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        >
+    </TextView>
+    
+     <TextView
+        android:id="@+id/row_editorial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row_autor"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        >
+    </TextView>
+    
+     <TextView
+        android:id="@+id/row_calificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row_autor"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        >
+    </TextView>
+    
+     <TextView
+        android:id="@+id/row_precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row_autor"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        >
+    </TextView>
+    
+     <TextView
+        android:id="@+id/row_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row_autor"
+         android:textColor="@android:color/white"
+        android:layout_marginLeft="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        >
+    </TextView>
+
+</RelativeLayout>

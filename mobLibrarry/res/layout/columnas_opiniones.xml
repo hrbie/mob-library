@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip" >
+    
+    <TextView
+        android:id="@+id/row_lbl_nombre_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/row_nombre_usuario"
+        android:textAppearance="?android:attr/textAppearanceMedium" >
+    </TextView>
+    
+    <TextView
+        android:id="@+id/row_lbl_calificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row_nombre_usuario"
+        android:text="@string/row_calificacion"
+        android:textAppearance="?android:attr/textAppearanceMedium" >
+
+    </TextView>
+    
+    <TextView
+        android:id="@+id/row_nombre_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:textAppearance="?android:attr/textAppearanceMedium">
+    </TextView>
+ 
+     <TextView
+        android:id="@+id/row_calificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row_nombre_usuario"
+        android:layout_marginLeft="100dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        >
+    </TextView>
+    
+     <TextView
+        android:id="@+id/row_comentario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row_calificacion"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="25dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        >
+    </TextView>
+</RelativeLayout>

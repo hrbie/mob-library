@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">mobLibrarry</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrasena">Contraña</string>
+    <string name="entrar">Entrar</string>
+    <string name="buscar_menu">Buscar</string>
+    <string name="ubicar_menu">Ubicar</string>
+    <string name="proximo_menu">Proximo a Leer</string>
+    <string name="recomendar_menu">Recomendar</string>
+    <string name="editar_menu">Editar </string>
+    <string name="salir_menu">Salir</string>
+    <string name="libreria">Libreria</string>
+    <string name="buscarPor">Buscar por</string>
+    <string name="buscar">Buscar:</string>
+    <string name="space"/>
+    <string name="nombre">Nombre:</string>
+    <string name="autor">Autor:</string>
+    <string name="ano">Año:</string>
+    <string name="resultado">Resultado de la Busqueda</string>
+    
+    <string name="APP_ID">806692742691470</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="row_nombre_libro">Libro: </string>
+    <string name="row_autor_libro">Autor: </string>
+    <string name="row_ano_libro">Año: </string>
+    <string name="nombre_libro">Nombre del Libro:</string>
+    <string name="editorial">Editorial:</string>
+    <string name="precio">Precio:</string>
+    <string name="cantidad_ejemplares">Cantidad de Ejemplares</string>
+    <string name="calificacion">Calificacion General</string>
+    <string name="comentario">Comentarios</string>
+    <string name="informacion">Informacion del Libro</string>
+    <string name="isbn">ISBN:</string>
+    <string name="opciones">+ Opciones</string>
+    <string name="agregar">Agregar a  Proximos a Leer</string>
+    <string name="pedidos">Pedidos</string>
+    <string name="traslados">Traslados</string>
+    <string name="calificar">Calificar Libro</string>
+    <string name="comentarios">Comentarios</string>
+    <string name="titulo">Titulo:</string>
+    <string name="coment">Comentario:</string>
+    <string name="publicar">Publicar</string>
+    <string name="ver_comen">Ver Comentarios</string>
+    <string name="promediar">Calificar:</string>
+    <string name="promedio_general">Calificacion General</string>
+    <string name="promediar2">Publicar </string>
+    <string name="row_nombre_usuario">Usuario:</string>
+    <string name="row_comentario">Comentario</string>
+    <string name="row_calificacion">Calificacion:</string>
+    <string name="punto_de_venta">Puntos de Venta</string>
+    <string name="cantidad_pedido">Cantidad de Pedidos</string>
+    <string name="realizar_pedido">Realizar Pedidos</string>
+    <string name="punto_de_venta_origen">Punto de Venta Origen</string>
+    <string name="punto_de_venta_destino">Punto de Venta Destino</string>
+    <string name="traslado">Traslado</string>
+    <string name="realizar_traslado">Realizar Traslado</string>
+    <string name="agregar_proximo_leer">Agreagar a Proximos a Leer</string>
+    <string name="desea">Desea agregar el libro a La Lista de Proximos a Leer</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="urlPostUsuario">http://moblibrary.azurewebsites.net/api/UsuarioAPI/PostUSUARIO</string>
+    <string name="editar_perfil">Perfil</string>
+    <string name="apellido1">Apellido 1:</string>
+    <string name="direccion">Direccion: </string>
+    <string name="editar_email">Email:</string>
+    <string name="guardar">Guardar Cambios</string>
+    <string name="apellido2">Apellido 2:</string>
+    <string name="url_Libreria">http://moblibrary.azurewebsites.net/api/CadenaLibreriasAPI/GetCADENA_LIBRERIAS</string>
+    <string name="escritoPor">escrito por:</string>
+    
+
+</resources>
