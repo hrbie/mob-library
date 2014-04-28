@@ -104,7 +104,20 @@ namespace mobLibrary.Controllers
 
             return libro;
         }
-        
+
+        [HttpGet]
+        public IEnumerable<LIBRO> Recomendaciones(string id)
+        {
+            //probar este
+            IEnumerable<LIBRO> libro = Libros().Where(p => p.GENERO.Where(g => g.GENERO1.ToLower() == id.ToLower()) != null).OrderBy(x => x.CALIFICACION).Reverse();
+            if (libro == null)
+            {
+                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
+            }
+
+            return libro;
+        }
+
         // GET api/LibroControllerAPI/GetLIBROByAnio/{anio}
         [HttpGet]
         public IEnumerable<LIBRO> GetLIBROByAnio(int id)

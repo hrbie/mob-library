@@ -200,6 +200,7 @@
     <Compile Include="Controllers\LibroAPIController.cs" />
     <Compile Include="Controllers\ListaLibrosAPIController.cs" />
     <Compile Include="Controllers\ListaLibrosController.cs" />
+    <Compile Include="Controllers\LISTA_LIBROS_2.cs" />
     <Compile Include="Controllers\PuntoVentaAPIController.cs" />
     <Compile Include="Controllers\PuntoVentaController.cs" />
     <Compile Include="Controllers\SolicitudPedidoAPIController.cs" />

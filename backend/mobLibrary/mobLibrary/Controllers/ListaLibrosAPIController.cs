@@ -103,6 +103,53 @@ namespace mobLibrary.Controllers
             //return lista_libros.AsEnumerable();
         }
 
+        public IEnumerable<LISTA_LIBROS> GetLISTA_LIBROSByLibroAndUsuario(int id_usuario, long isbn)
+        {
+            //var lista_libros = db.LISTA_LIBROS.Include(l => l.LIBRO).Include(l => l.USUARIO);
+
+            return db.LISTA_LIBROS.Select(t => new
+            {
+                ID_USUARIO = t.ID_USUARIO,
+                ISBN = t.ISBN,
+                CALIFICACION = t.CALIFICACION,
+                OPINION = t.OPINION,
+                ESTADO = t.ESTADO
+            }).ToList().Select(x => new LISTA_LIBROS
+            {
+                ID_USUARIO = x.ID_USUARIO,
+                ISBN = x.ISBN,
+                CALIFICACION = x.CALIFICACION,
+                OPINION = x.OPINION,
+                ESTADO = x.ESTADO
+            }).Where(l => l.ISBN == isbn && l.ID_USUARIO == id_usuario );
+
+            //return lista_libros.AsEnumerable();
+        }
+
+        public IEnumerable<LISTA_LIBROS_2> GetLISTA_LIBROSByLibro2(int id)
+        {
+            //var lista_libros = db.LISTA_LIBROS.Include(l => l.LIBRO).Include(l => l.USUARIO);
+
+            return db.LISTA_LIBROS.Select(t => new
+            {
+                ID_USUARIO = t.ID_USUARIO,
+                USUARIO = t.USUARIO,
+                ISBN = t.ISBN,
+                CALIFICACION = t.CALIFICACION,
+                OPINION = t.OPINION,
+                ESTADO = t.ESTADO
+            }).ToList().Select(x => new LISTA_LIBROS_2
+            {
+                USUARIO = x.USUARIO.NOMBRE + " " + x.USUARIO.APELLIDO1 + " " + x.USUARIO.APELLIDO2,
+                ISBN = x.ISBN,
+                CALIFICACION = x.CALIFICACION,
+                OPINION = x.OPINION,
+                ESTADO = x.ESTADO
+            }).Where(l => l.ISBN == id && l.OPINION != null && l.OPINION != "");
+
+            //return lista_libros.AsEnumerable();
+        }
+
          // PUT api/ListaLibrosAPI/5
         public HttpResponseMessage PutLISTA_LIBROS(int id, LISTA_LIBROS lista_libros)
         {

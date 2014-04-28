@@ -66,7 +66,7 @@ namespace mobLibrary.Controllers
         public IEnumerable<LIBRO> GetLIBROByGenero(string id)
         {
             //probar este
-            IEnumerable<LIBRO> libro = db.LIBRO.Where(p => p.GENERO.Where(g => g.GENERO1 == id)!= null );
+            IEnumerable<LIBRO> libro = db.LIBRO.Where(p => p.GENERO.Where(g => g.GENERO1.ToLower() == id.ToLower())!= null );
             if (libro == null)
             {
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
@@ -74,6 +74,20 @@ namespace mobLibrary.Controllers
 
             return libro;
         }
+
+        [HttpGet]
+        public IEnumerable<LIBRO> Recomendaciones(string genero)
+        {
+            //probar este
+            IEnumerable<LIBRO> libro = db.LIBRO.Where(p => p.GENERO.Where(g => g.GENERO1.ToLower() == genero.ToLower()) != null).OrderBy(x=>x.CALIFICACION).Reverse() ;
+            if (libro == null)
+            {
+                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
+            }
+
+            return libro;
+        }
+
         [HttpGet]
         public IEnumerable<LIBRO> GetLIBROByAnio(int id)
         {
