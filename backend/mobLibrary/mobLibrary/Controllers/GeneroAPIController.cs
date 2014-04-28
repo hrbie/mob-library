@@ -17,7 +17,7 @@ namespace mobLibrary.Controllers
         private mobLibraryEntities db = new mobLibraryEntities();
 
         // GET api/GeneroAPI
-        public IEnumerable<GENERO> GetGENEROes()
+        public IEnumerable<GENERO> GetGENEROs()
         {
             return db.GENERO.AsEnumerable();
         }

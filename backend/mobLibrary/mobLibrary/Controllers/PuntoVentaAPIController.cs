@@ -61,7 +61,7 @@ namespace mobLibrary.Controllers
             return punto_venta;
         }
 
-        // GET api/PuntoVentaAPI/5
+        // GET api/PuntoVentaAPI/GetPUNTO_VENTA_ByLIBRERIA/id
         public IEnumerable<PUNTO_VENTA> GetPUNTO_VENTA_ByLIBRERIA(int id)
         {
             //PUNTO_VENTA punto_venta = db.PUNTO_VENTA.Find(id);
